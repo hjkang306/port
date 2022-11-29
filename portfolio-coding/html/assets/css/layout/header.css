@@ -3,10 +3,14 @@
   padding: 30px;
   position: fixed;
   top: 0;
+  z-index: 1000;
 }
 .header__inner {
   display: flex;
   justify-content: space-between;
+}
+.details__inner {
+  width: 33%;
 }
 
 details summary::marker {
@@ -17,9 +21,10 @@ details > summary::after {
     content: 'v';
     text-transform: lowercase;
     font-size: 20px;
-    font-weight: 400;
-    margin-left: 30px;
+    line-height: 1;
 }
+.color__menu > summary::after {margin-left: 30px;}
+.navigation > summary::after {margin-left: 20px;}
 details[open] > summary::after {
   content: '-';
   font-size: 24px;
@@ -27,6 +32,7 @@ details[open] > summary::after {
 
 /* color */
 .color__menu {
+  width: 180px;
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
@@ -73,6 +79,8 @@ details[open] > summary::after {
 
 /* nav */
 .navigation {
+  float: right;
+  width: 240px;
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
