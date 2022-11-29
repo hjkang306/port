@@ -1,0 +1,18 @@
+:root {
+  --white: #F2EEEA;
+  --black: #000;
+
+  --font-size: 16px;
+  --font-height: 1.4;
+  --font-color: #F2EEEA;
+  --font-eng: "Rubik";
+  --font-kor1: "SCoreDream";
+  --font-kor2: "SebangGothic";
+
+  --pc-r: #F44545;
+  --pc-o: #FF5C00;
+  --pc-y: #FFB800;
+  --pc-g: #79D869;
+  --pc-b: #1859FF;
+  --pc-p: #8F20E7;
+}

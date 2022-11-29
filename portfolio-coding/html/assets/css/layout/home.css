@@ -1,0 +1,38 @@
+#home {
+  width: 100%;
+  overflow: hidden;
+}
+.main__title {
+  font-family: var(--font-eng);
+  font-weight: 700;
+  font-size: 200px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 420px;
+}
+.figure__inner {
+}
+.figure {
+}
+.figure1 {
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+  background: var(--pc-y);
+}
+.figure1 .star {
+}
+.figure1 .hover__txt {
+}
+.figure1 img {
+  width: 200px;
+  object-fit: contain;
+}
+.figure2 {
+}
+.figure3 {
+}
+.figure4 {
+}
+.figure5 {
+}
