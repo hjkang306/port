@@ -37,6 +37,13 @@ details[open] > summary::after {
   box-sizing: border-box;
   text-transform: uppercase;
 }
+.color__menu:active summary {
+  background: var(--black);
+  color: var(--white);
+}
+.color__menu[open]:active summary {
+  border-bottom: 3px solid var(--white);
+}
 .color__menu summary {
   background: var(--white);
   padding: 10px 30px;
@@ -84,6 +91,13 @@ details[open] > summary::after {
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
+}
+.navigation:active summary {
+  background: var(--black);
+  color: var(--white);
+}
+.navigation[open]:active summary {
+  border-bottom: 3px solid var(--white);
 }
 .navigation summary {
   background: var(--white);

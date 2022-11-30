@@ -1,0 +1,26 @@
+/* 애니메이션 */
+.move__text__inner {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.animation01 {
+  display: inline-block;
+  white-space: nowrap;
+  transform: translateX(0);
+  animation: scrolling 50s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
