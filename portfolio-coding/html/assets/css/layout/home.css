@@ -11,11 +11,11 @@
   white-space: nowrap;
   margin-top: 420px;
 }
-.figure__inner {
+#home .figure__inner {
 }
-.figure {
+#home .figure {
 }
-.figure1 {
+#home .figure1 {
   position: relative;
   width: 250px;
   height: 250px;
@@ -47,7 +47,7 @@
   top: 220px;
   left: 500px;
 }
-.figure1 .sunglass {
+#home .figure1 .sunglass {
   background: url('../../img/sunglass.png') no-repeat center / contain;
   width: 115px;
   height: 60px;
@@ -58,16 +58,16 @@
   transform: rotate(-45deg);
   transition: top .3s, left .3s;
 }
-.figure1:hover .sunglass {
+#home .figure1:hover .sunglass {
   top: -1000px;
   left: -500px;
 }
-.figure1 img {
+#home .figure1 img {
   width: 250px;
   transform: rotate(-45deg) scale(1.4) translate(20px, 10px);
 }
 
-.figure2 {
+#home .figure2 {
   width: 334px;
   height: 334px;
   transform: rotate(45deg);
@@ -77,7 +77,7 @@
   left: 310px;
   overflow: hidden;
 }
-.figure3 {
+#home .figure3 {
   width: 172px;
   height: 172px;
   transform: rotate(45deg);
@@ -88,7 +88,7 @@
   overflow: hidden;
   z-index: -1;
 }
-.figure4 {
+#home .figure4 {
   width: 410px;
   height: 410px;
   transform: rotate(45deg);
@@ -99,7 +99,7 @@
   overflow: hidden;
   z-index: -1;
 }
-.figure5 {
+#home .figure5 {
   width: 210px;
   height: 210px;
   transform: rotate(45deg);
