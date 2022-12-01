@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin-bottom: 200px;
 }
 .main__title {
   font-family: var(--font-eng);
@@ -14,14 +15,14 @@
 #home .figure__inner {
 }
 #home .figure {
+  background: var(--pc-y);
+  transform: rotate(45deg);
+  position: absolute;
 }
 #home .figure1 {
   position: relative;
   width: 250px;
   height: 250px;
-  transform: rotate(45deg);
-  background: var(--pc-y);
-  position: absolute;
   top: 206px;
   left: 230px;
   overflow: hidden;
@@ -35,7 +36,6 @@
   position: absolute;
   top: 180px;
   left: 200px;
-  animation: rot01 2s infinite;
 }
 .hover__txt {
   font-family: var(--font-eng);
@@ -70,51 +70,26 @@
 #home .figure2 {
   width: 334px;
   height: 334px;
-  transform: rotate(45deg);
-  background: var(--pc-y);
-  position: absolute;
   top: 477px;
   left: 310px;
-  overflow: hidden;
 }
 #home .figure3 {
   width: 172px;
   height: 172px;
-  transform: rotate(45deg);
-  background: var(--pc-y);
-  position: absolute;
   top: 355px;
   left: 706px;
-  overflow: hidden;
   z-index: -1;
 }
 #home .figure4 {
   width: 410px;
   height: 410px;
-  transform: rotate(45deg);
-  background: var(--pc-y);
-  position: absolute;
   top: 340px;
   left: 960px;
-  overflow: hidden;
   z-index: -1;
 }
 #home .figure5 {
   width: 210px;
   height: 210px;
-  transform: rotate(45deg);
-  background: var(--pc-y);
-  position: absolute;
   top: 355px;
   left: 1440px;
-  overflow: hidden;
-}
-
-@keyframes rot01 {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
 }

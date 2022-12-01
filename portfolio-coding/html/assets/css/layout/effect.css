@@ -1,0 +1,136 @@
+#effect {
+}
+.effect__title__section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 200px;
+}
+.effect__title {
+    font-family: var(--font-eng);
+    font-weight: 700;
+    font-size: 200px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-top: 420px;
+}
+.figure__inner {
+}
+
+/* figure */
+#effect .figure {
+    width: 210px;
+    height: 200px;
+    background: var(--pc-y);
+}
+#effect .figure1 {
+    transform: skewY(-25deg);
+    position: absolute;
+    top: 270px;
+    left: -40px;
+    z-index: -1;
+}
+#effect .figure2 {
+    transform: skewY(25deg);
+    position: absolute;
+    top: 270px;
+    left: 190px;
+}
+#effect .figure3 {
+    transform: skewY(-25deg);
+    position: absolute;
+    top: 270px;
+    left: 420px;
+    z-index: -1;
+}
+#effect .figure4 {
+    transform: skewY(-25deg);
+    position: absolute;
+    top: 167px;
+    left: 650px;
+}
+#effect .figure5 {
+    transform: skewY(-25deg);
+    position: absolute;
+    top: 600px;
+    left: 1070px;
+}
+#effect .figure6 {
+    transform: skewY(25deg);
+    position: absolute;
+    top: 600px;
+    left: 1300px;
+}
+#effect .figure7 {
+    transform: skewY(-25deg);
+    position: absolute;
+    top: 600px;
+    left: 1530px;
+    z-index: -1;
+}
+#effect .figure8 {
+    transform: skewY(25deg);
+    position: absolute;
+    top: 600px;
+    left: 1760px;
+}
+
+/* effect */
+#search__effect {}
+#quiz__effect {}
+#mouse__effect {}
+#slider__effect {}
+#parallax__effect {}
+#game__effect {}
+
+/* effect */
+.effect__section {
+    position: relative;
+}
+.effect__desc {
+    width: 373px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: -0.05em;
+    text-align: justify;
+    padding-top: 195px;
+    margin-bottom: 295px;
+}
+.effect__tit {
+    font-family: var(--font-eng);
+    font-size: 80px;
+    font-weight: 400;
+}
+.effect__tit em {
+    text-transform: uppercase;
+    font-size: 120px;
+}
+
+.effect__decos {}
+.effect__deco01 {}
+.effect__deco02 {}
+
+.effect__img__wrap {
+    width: 65%;
+    position: absolute;
+    top: 195px;
+    right: 0px;
+    border: 3px solid var(--white);
+}
+.effect__img__tit {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font-eng);
+    font-size: 28.8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 36px 17px;
+}
+.effect__img__tit::after {
+    margin-left: 79%;
+    font-size: 28px;
+}
+.effect__img__wrap img {}
+
