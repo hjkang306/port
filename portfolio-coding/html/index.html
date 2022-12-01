@@ -180,8 +180,8 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01"></div>
-                <div class="effect__deco02"></div>
+                <div class="effect__deco01">effect</div>
+                <div class="effect__deco02">search</div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
@@ -199,8 +199,8 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01"></div>
-                <div class="effect__deco02"></div>
+                <div class="effect__deco01">effect</div>
+                <div class="effect__deco02">quiz</div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
@@ -218,8 +218,8 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01"></div>
-                <div class="effect__deco02"></div>
+                <div class="effect__deco01">effect</div>
+                <div class="effect__deco02">mouse</div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
@@ -237,8 +237,8 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01"></div>
-                <div class="effect__deco02"></div>
+                <div class="effect__deco01">effect</div>
+                <div class="effect__deco02">slider</div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
@@ -256,8 +256,8 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01"></div>
-                <div class="effect__deco02"></div>
+                <div class="effect__deco01">effect</div>
+                <div class="effect__deco02">parallax</div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
@@ -275,8 +275,8 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01"></div>
-                <div class="effect__deco02"></div>
+                <div class="effect__deco01">effect</div>
+                <div class="effect__deco02">game</div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
@@ -289,11 +289,81 @@
 
       <section id="react">
         <div class="react__wrap">
-            <div class="react__section react__section01"></div>
-            <div class="react__section react__section02"></div>
-            <div class="react__section react__section03"></div>
+            <div class="react__section__inner">
+                <div class="react__section react__section01">
+                    <div class="move__text__inner">
+                        <h3 class="react__section__tit animation01">REACT • SITE • REACT •  API •&nbsp;</h3>
+                        <h3 class="react__section__tit animation01">REACT • SITE • REACT •  API •&nbsp;</h3>
+                    </div>
+                    <div class="figure__inner">
+                        <div class="figure figure1"></div>
+                        <div class="figure figure2"></div>
+                        <div class="figure figure3"></div>
+                        <div class="figure figure4"></div>
+                        <div class="figure figure5"></div>
+                        <div class="figure figure6"></div>
+                        <div class="figure figure7"></div>
+                    </div>
+                    <img src="assets/img/reactApi.png" alt="리액트 목업 이미지">
+                </div>
+                <div class="react__section react__section02">
+                </div>
+            </div>
         </div>
       </section>
+      <!-- react -->
+
+      <section id="vue">
+        <div class="vue__wrap">
+            <div class="vue__section__inner">
+                <div class="vue__section vue__section01">
+                    <div class="move__text__inner">
+                        <h3 class="vue__section__tit animation01">vue • SITE • vue •  API •&nbsp;</h3>
+                        <h3 class="vue__section__tit animation01">vue • SITE • vue •  API •&nbsp;</h3>
+                    </div>
+                    <div class="figure__inner">
+                        <div class="figure figure1"></div>
+                        <div class="figure figure2"></div>
+                        <div class="figure figure3"></div>
+                        <div class="figure figure4"></div>
+                        <div class="figure figure5"></div>
+                        <div class="figure figure6"></div>
+                        <div class="figure figure7"></div>
+                    </div>
+                    <img src="assets/img/vueApi.png" alt="리액트 목업 이미지">
+                </div>
+                <div class="vue__section vue__section02">
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- vue -->
+
+      <section id="php">
+        <div class="php__wrap">
+            <div class="php__section__inner">
+                <div class="php__section php__section01">
+                    <div class="move__text__inner">
+                        <h3 class="php__section__tit animation01">php • SITE • php • SITE •&nbsp;</h3>
+                        <h3 class="php__section__tit animation01">php • SITE • php • SITE •&nbsp;</h3>
+                    </div>
+                    <div class="figure__inner">
+                        <div class="figure figure1"></div>
+                        <div class="figure figure2"></div>
+                        <div class="figure figure3"></div>
+                        <div class="figure figure4"></div>
+                        <div class="figure figure5"></div>
+                        <div class="figure figure6"></div>
+                        <div class="figure figure7"></div>
+                    </div>
+                    <img src="assets/img/phpApi.png" alt="리액트 목업 이미지">
+                </div>
+                <div class="php__section php__section02">
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- php -->
 
     </main>
 
@@ -322,19 +392,43 @@
         // gsap
         gsap.registerPlugin(ScrollTrigger);
 
-        const sections = gsap.utils.toArray(".react__section");
+        const sections01 = gsap.utils.toArray(".react__section");
+        const sections02 = gsap.utils.toArray(".vue__section");
+        const sections03 = gsap.utils.toArray(".php__section");
 
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length -1),
+        gsap.to(sections01, {
+            xPercent: -100 * (sections01.length -1),
             ease: "none",
             scrollTrigger: {
-            trigger: "#react",
-            pin: true,
-            scrub: 1,
-            end: "+=4000",
-            markers: true,
+                trigger: ".react__wrap",
+                pin: true,
+                scrub: 1,
+                end: "+=4000",
+                markers: true,
             }
-        })
+        });
+        gsap.to(sections02, {
+            xPercent: -100 * (sections02.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".vue__wrap",
+                pin: true,
+                scrub: 1,
+                end: "+=4000",
+                markers: true,
+            }
+        });
+        gsap.to(sections03, {
+            xPercent: -100 * (sections03.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".php__wrap",
+                pin: true,
+                scrub: 1,
+                end: "+=4000",
+                markers: true,
+            }
+        });
     </script>
   </body>
 </html>

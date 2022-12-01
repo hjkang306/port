@@ -77,12 +77,14 @@
 }
 
 /* effect */
-#search__effect {}
-#quiz__effect {}
-#mouse__effect {}
-#slider__effect {}
-#parallax__effect {}
-#game__effect {}
+#search__effect,
+#quiz__effect,
+#mouse__effect,
+#slider__effect,
+#parallax__effect,
+#game__effect {
+    position: relative;
+}
 
 /* effect */
 .effect__section {
@@ -108,9 +110,38 @@
     font-size: 120px;
 }
 
-.effect__decos {}
-.effect__deco01 {}
-.effect__deco02 {}
+.effect__decos {
+    font-family: var(--font-eng);
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+.effect__deco01 {
+    width: 150px;
+    height: 70px;
+    background: url(../../img/ticket01.png) no-repeat center / cover;
+    transform: rotateZ(-13deg);
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    right: 280px;
+}
+.effect__deco02 {
+    width: 222px;
+    height: 70px;
+    background: url(../../img/ticket02.png) no-repeat center / cover;
+    transform: rotateZ(-25deg);
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    top: 60px;
+    right: 87px;
+    z-index: 1;
+}
 
 .effect__img__wrap {
     width: 65%;

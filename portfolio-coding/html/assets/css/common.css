@@ -45,4 +45,6 @@ img {
     position: fixed;
     left: 50px;
     bottom: 50px;
+    z-index: 2;
+    background: #0006;
 }
