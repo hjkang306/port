@@ -6,6 +6,7 @@
 @import "assets/css/animation.css";
 
 /* 섹션 */
+@import "assets/css/layout/notice.css";
 @import "assets/css/layout/header.css";
 @import "assets/css/layout/home.css";
 @import "assets/css/layout/about.css";

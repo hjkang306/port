@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .tag {
+                width: 10%;
+                height: 70px;
+                position: relative;
+                cursor: pointer;
+            }
+            .tag svg {
+                width: 100%;
+                position: absolute;
+                z-index: -1;
+            }
+            .tag svg path {}
+            .txt {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tag">
+            <svg
+                width="279"
+                height="70"
+                viewBox="0 0 279 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M0 5C0 2.23857 2.23858 0 5 0H247.477C248.93 0 250.311 0.631969 251.261 1.73144L277.176 31.7314C278.798 33.6088 278.798 36.3913 277.176 38.2686L251.261 68.2686C250.311 69.368 248.93 70 247.477 70H5C2.23858 70 0 67.7614 0 65V35V5Z"
+                    fill="#1859FF"
+                />
+            </svg>
+            <div class="txt">CONTACT</div>
+        </div>
+
+        <script>
+            const tag = document.querySelector(".tag");
+            const svg = document.querySelector(".tag svg path");
+
+            tag.addEventListener("click", ()=>{
+                console.log(svg.getAttribute("fill"));
+                svg.setAttribute("fill", "red");
+            })
+        </script>
+    </body>
+</html>

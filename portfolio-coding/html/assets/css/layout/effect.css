@@ -120,27 +120,48 @@
     top: 80px;
     right: 0;
 }
+
+/* .effect__deco */
+.effect__deco01:hover,
+.effect__deco02:hover {
+    transform: rotateZ(0deg);
+}
+/* .effect__deco01 */
 .effect__deco01 {
     width: 150px;
     height: 70px;
-    background: url(../../img/ticket01.png) no-repeat center / cover;
     transform: rotateZ(-13deg);
-    text-align: center;
-    line-height: 70px;
     position: absolute;
     right: 280px;
+    transition: transform .5s;
 }
+.effect__deco01 svg {
+    position: absolute;
+    z-index: -1;
+}
+.effect__deco01__txt {
+    text-align: center;
+    line-height: 70px;
+}
+
+/* .effect__deco02 */
 .effect__deco02 {
     width: 222px;
     height: 70px;
-    background: url(../../img/ticket02.png) no-repeat center / cover;
     transform: rotateZ(-25deg);
-    text-align: center;
-    line-height: 70px;
     position: absolute;
     top: 60px;
     right: 87px;
     z-index: 1;
+    transition: transform .5s;
+}
+.effect__deco02 svg {
+    position: absolute;
+    z-index: -1;
+}
+.effect__deco02__txt {
+    text-align: center;
+    line-height: 70px;
 }
 
 .effect__img__wrap {

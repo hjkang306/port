@@ -89,12 +89,19 @@
 .contact__tag{
     width: 20%;
     height: 70px;
-    background: url(../../img/tag.png) no-repeat center / cover;
-    text-align: center;
+    position: relative;
+}
+.contact__tag__txt {
     font-family: var(--font-eng);
     font-size: 30px;
     font-weight: 400;
     line-height: 70px;
+    text-align: center;
+}
+.contact__tag svg {
+    position: absolute;
+    left: 7%;
+    z-index: -1;
 }
 
 .contact__address__section ul {

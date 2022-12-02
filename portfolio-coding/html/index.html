@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="fixed">
     <div id="skip">
       <a href="#home">home 바로 가기</a>
       <a href="#about">about 바로 가기</a>
@@ -21,6 +21,16 @@
     <!-- //skip -->
 
     <div class="scrollTop"></div>
+    
+    <div class="notice show">
+        <h3 class="notice__tit">check point !</h3>
+        <p class="notice__txt">
+            이 페이지는 <span class="point__color">드래그 앤 드롭</span> 기능이 곳곳에 들어있습니다.
+            재미있는 요소도 많이 숨겨 두었으니, 하나씩 찾아보며 즐겨주세요!
+        </p>
+        <button class="notice__close" type="button">확인!</button>
+    </div>
+    <!-- notice -->
 
     <header id="header">
       <div class="header__inner">
@@ -42,7 +52,7 @@
         <h1 class="logo drag"><a href="#home" class="ir">hyeonji's portfolio</a></h1>
 
         <div class="details__inner drag">
-          <details class="navigation">
+          <details class="navigation" open>
             <summary>navigation</summary>
             <ul>
               <li><a href="#home">home</a></li>
@@ -180,12 +190,32 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01">effect</div>
-                <div class="effect__deco02">search</div>
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        search
+                    </div>
+                </div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <img src="assets/img/effect01.jpg" alt="코딩 이미지01">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/searchEffect05.html">
+                    <img src="assets/img/effect01.jpg" alt="코딩 이미지01">
+                </a>
             </details>
         </div>
         <!-- search__effect -->
@@ -199,12 +229,32 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01">effect</div>
-                <div class="effect__deco02">quiz</div>
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        quiz
+                    </div>
+                </div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <img src="assets/img/effect02.jpg" alt="코딩 이미지02">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/quizEffect05.html">
+                    <img src="assets/img/effect02.jpg" alt="코딩 이미지02">
+                </a>
             </details>
         </div>
         <!-- quiz__effect -->
@@ -218,12 +268,32 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01">effect</div>
-                <div class="effect__deco02">mouse</div>
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        mouse
+                    </div>
+                </div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <img src="assets/img/effect03.jpg" alt="코딩 이미지03">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/mouseEffect01.html">
+                    <img src="assets/img/effect03.jpg" alt="코딩 이미지03">
+                </a>
             </details>
         </div>
         <!-- mouse__effect -->
@@ -237,12 +307,32 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01">effect</div>
-                <div class="effect__deco02">slider</div>
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        slider
+                    </div>
+                </div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <img src="assets/img/effect04.jpg" alt="코딩 이미지04">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/sliderEffect01.html">
+                    <img src="assets/img/effect04.jpg" alt="코딩 이미지04">
+                </a>
             </details>
         </div>
         <!-- slider__effect -->
@@ -256,12 +346,32 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01">effect</div>
-                <div class="effect__deco02">parallax</div>
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        parallax
+                    </div>
+                </div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <img src="assets/img/effect05.jpg" alt="코딩 이미지05">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/parallaxEffect01.html">
+                    <img src="assets/img/effect05.jpg" alt="코딩 이미지05">
+                </a>
             </details>
         </div>
         <!-- parallax__effect -->
@@ -275,12 +385,32 @@
                 Effect
             </h3>
             <div class="effect__decos">
-                <div class="effect__deco01">effect</div>
-                <div class="effect__deco02">game</div>
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        game
+                    </div>
+                </div>
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <img src="assets/img/effect06.jpg" alt="코딩 이미지06">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/gameEffect01.html">
+                    <img src="assets/img/effect06.jpg" alt="코딩 이미지06">
+                </a>
             </details>
         </div>
         <!-- game__effect -->
@@ -382,7 +512,21 @@
             </div>
         </div>
         <div class="contact__address__section container">
-            <div class="contact__tag">CONTACT ME !</div>
+            <div class="contact__tag">
+                <svg
+                    width="279"
+                    height="70"
+                    viewBox="0 0 279 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 5C0 2.23857 2.23858 0 5 0H247.477C248.93 0 250.311 0.631969 251.261 1.73144L277.176 31.7314C278.798 33.6088 278.798 36.3913 277.176 38.2686L251.261 68.2686C250.311 69.368 248.93 70 247.477 70H5C2.23858 70 0 67.7614 0 65V35V5Z"
+                        fill="#FFB800"
+                    />
+                </svg>
+                <div class="contact__tag__txt">CONTACT ME !</div>
+            </div>
             <ul>
                 <li>
                     <div class="contact__tag__tit">Email</div>
@@ -412,69 +556,19 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="assets/js/color.js"></script>
     <script>
       $(".drag").draggable({ opacity: 0.8 });
     </script>
 
-    <!-- color -->
+    <!-- notice -->
     <script>
-        const colorMenu = document.querySelectorAll(".color__menu ul li");
-        const figure = document.querySelectorAll(".figure");
-        const pointColor = document.querySelectorAll(".point__color");
-        const star = document.querySelectorAll(".star");
-        const hoverTxt = document.querySelectorAll(".hover__txt");
-        const contactTagTit = document.querySelectorAll(".contact__tag__tit");
+        const notice = document.querySelector(".notice");
+        const noticeClose = document.querySelector(".notice__close");
 
-        function whatColor(click){
-            console.log(click.innerHTML)
-            switch(click.innerHTML){
-                case "red" :
-                    colorChage("var(--pc-r)");
-                    break;
-                case "orange" :
-                    colorChage("var(--pc-o)");
-                    break;
-                case "yellow" :
-                    colorChage("var(--pc-y)");
-                    break;
-                case "green" :
-                    colorChage("var(--pc-g)");
-                    break;
-                case "blue" :
-                    colorChage("var(--pc-b)");
-                    break;
-                case "purple" :
-                    colorChage("var(--pc-p)");
-                    break;
-            }
-        }
-
-        function colorChage(color){
-            figure.forEach(ef => {
-                ef.style.backgroundColor = color;
-            })
-            pointColor.forEach(ep => {
-                ep.style.backgroundColor = color;
-            })
-            star.forEach(es => {
-                es.style.color = color;
-            })
-            hoverTxt.forEach(eh => {
-                eh.style.color = color;
-            })
-            contactTagTit.forEach(ec => {
-                ec.style.color = color;
-            })
-        }
-
-        colorMenu.forEach(e => {
-            e.addEventListener("click", ()=>{
-                colorMenu.forEach(ele => {
-                    ele.classList.remove("active");
-                })
-                whatColor(e);
-                e.classList.add("active");
-            });
+        noticeClose.addEventListener("click", () => {
+            notice.classList.remove("show");
+            document.body.classList.remove("fixed")
         })
     </script>
 

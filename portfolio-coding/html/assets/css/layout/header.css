@@ -3,7 +3,7 @@
   padding: 30px;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 2;
 }
 .header__inner {
   display: flex;
@@ -36,6 +36,8 @@ details[open] > summary::after {
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
+  position: absolute;
+  z-index: 10;
 }
 .color__menu:active summary {
   background: var(--black);
@@ -98,6 +100,9 @@ details[open] > summary::after {
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  z-index: 10;
 }
 .navigation:active summary {
   background: var(--black);
