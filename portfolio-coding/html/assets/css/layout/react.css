@@ -35,7 +35,7 @@
 }
 .react__section .figure {
     border-radius: 50%;
-    background: var(--pc-y);
+    background-color: var(--pc-y);
     position: absolute;
 }
 .react__section .figure1 {

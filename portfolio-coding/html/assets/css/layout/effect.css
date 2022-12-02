@@ -22,7 +22,7 @@
 #effect .figure {
     width: 210px;
     height: 200px;
-    background: var(--pc-y);
+    background-color: var(--pc-y);
 }
 #effect .figure1 {
     transform: skewY(-25deg);

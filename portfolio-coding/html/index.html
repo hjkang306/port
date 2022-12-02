@@ -30,7 +30,7 @@
             <ul>
               <li>red</li>
               <li>orange</li>
-              <li>yellow</li>
+              <li class="active">yellow</li>
               <li>green</li>
               <li>blue</li>
               <li>purple</li>
@@ -318,8 +318,8 @@
             <div class="vue__section__inner">
                 <div class="vue__section vue__section01">
                     <div class="move__text__inner">
-                        <h3 class="vue__section__tit animation01">vue • SITE • vue •  API •&nbsp;</h3>
-                        <h3 class="vue__section__tit animation01">vue • SITE • vue •  API •&nbsp;</h3>
+                        <h3 class="vue__section__tit animation01">VUE • SITE • VUE •  API •&nbsp;</h3>
+                        <h3 class="vue__section__tit animation01">VUE • SITE • VUE •  API •&nbsp;</h3>
                     </div>
                     <div class="figure__inner">
                         <div class="figure figure1"></div>
@@ -344,8 +344,8 @@
             <div class="php__section__inner">
                 <div class="php__section php__section01">
                     <div class="move__text__inner">
-                        <h3 class="php__section__tit animation01">php • SITE • php • SITE •&nbsp;</h3>
-                        <h3 class="php__section__tit animation01">php • SITE • php • SITE •&nbsp;</h3>
+                        <h3 class="php__section__tit animation01">PHP • SITE • PHP • SITE •&nbsp;</h3>
+                        <h3 class="php__section__tit animation01">PHP • SITE • PHP • SITE •&nbsp;</h3>
                     </div>
                     <div class="figure__inner">
                         <div class="figure figure1"></div>
@@ -368,8 +368,8 @@
       <footer id="contact">
         <div class="contact__title__section">
             <div class="move__text__inner">
-              <h3 class="contact__title animation01">contact • contact •&nbsp;</h3>
-              <h3 class="contact__title animation01">contact • contact •&nbsp;</h3>
+              <h3 class="contact__title animation01">CONTACT • CONTACT •&nbsp;</h3>
+              <h3 class="contact__title animation01">CONTACT • CONTACT •&nbsp;</h3>
             </div>
             <div class="figure__inner">
                 <div class="star rotateY">*</div>
@@ -381,16 +381,19 @@
                 <div class="figure figure5"></div>
             </div>
         </div>
-        <div class="contact__address__section">
+        <div class="contact__address__section container">
             <div class="contact__tag">CONTACT ME !</div>
             <ul>
                 <li>
-                    <a href="hjkang306@gmail.com">hjkang306@gmail.com</a>
+                    <div class="contact__tag__tit">Email</div>
+                    <a href="mailto:hjkang306@gmail.com">hjkang306@gmail.com</a>
                 </li>
                 <li>
+                    <div class="contact__tag__tit">Blog</div>
                     <a href="hjkang306.tistory.com">hjkang306.tistory.com</a>
                 </li>
                 <li>
+                    <div class="contact__tag__tit">Github</div>
                     <a href="github.com/hjkang306">github.com/hjkang306</a>
                 </li>
             </ul>
@@ -412,6 +415,70 @@
     <script>
       $(".drag").draggable({ opacity: 0.8 });
     </script>
+
+    <!-- color -->
+    <script>
+        const colorMenu = document.querySelectorAll(".color__menu ul li");
+        const figure = document.querySelectorAll(".figure");
+        const pointColor = document.querySelectorAll(".point__color");
+        const star = document.querySelectorAll(".star");
+        const hoverTxt = document.querySelectorAll(".hover__txt");
+        const contactTagTit = document.querySelectorAll(".contact__tag__tit");
+
+        function whatColor(click){
+            console.log(click.innerHTML)
+            switch(click.innerHTML){
+                case "red" :
+                    colorChage("var(--pc-r)");
+                    break;
+                case "orange" :
+                    colorChage("var(--pc-o)");
+                    break;
+                case "yellow" :
+                    colorChage("var(--pc-y)");
+                    break;
+                case "green" :
+                    colorChage("var(--pc-g)");
+                    break;
+                case "blue" :
+                    colorChage("var(--pc-b)");
+                    break;
+                case "purple" :
+                    colorChage("var(--pc-p)");
+                    break;
+            }
+        }
+
+        function colorChage(color){
+            figure.forEach(ef => {
+                ef.style.backgroundColor = color;
+            })
+            pointColor.forEach(ep => {
+                ep.style.backgroundColor = color;
+            })
+            star.forEach(es => {
+                es.style.color = color;
+            })
+            hoverTxt.forEach(eh => {
+                eh.style.color = color;
+            })
+            contactTagTit.forEach(ec => {
+                ec.style.color = color;
+            })
+        }
+
+        colorMenu.forEach(e => {
+            e.addEventListener("click", ()=>{
+                colorMenu.forEach(ele => {
+                    ele.classList.remove("active");
+                })
+                whatColor(e);
+                e.classList.add("active");
+            });
+        })
+    </script>
+
+    <!-- scroll -->
     <script>
         // 스크롤 값
         function scroll() {

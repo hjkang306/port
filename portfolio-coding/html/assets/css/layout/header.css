@@ -63,6 +63,13 @@ details[open] > summary::after {
   margin-top: 30px;
   cursor: pointer;
 }
+.color__menu ul li.active:nth-child(1) {color: var(--pc-r);}
+.color__menu ul li.active:nth-child(2) {color: var(--pc-o);}
+.color__menu ul li.active:nth-child(3) {color: var(--pc-y);}
+.color__menu ul li.active:nth-child(4) {color: var(--pc-g);}
+.color__menu ul li.active:nth-child(5) {color: var(--pc-b);}
+.color__menu ul li.active:nth-child(6) {color: var(--pc-p);}
+
 .color__menu ul li:first-child {
   margin-top: 0;
 }

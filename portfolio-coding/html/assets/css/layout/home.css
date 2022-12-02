@@ -15,7 +15,7 @@
 #home .figure__inner {
 }
 #home .figure {
-  background: var(--pc-y);
+  background-color: var(--pc-y);
   transform: rotate(45deg);
   position: absolute;
 }
