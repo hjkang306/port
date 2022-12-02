@@ -3,6 +3,10 @@
     height: 100vh;
     overflow: hidden;
     margin-bottom: 200px;
+    position: relative;
+}
+.contact__title__section {
+    margin-bottom: 536px;
 }
 .contact__title {
     font-family: var(--font-eng);
@@ -36,8 +40,9 @@
     text-transform: uppercase;
     color: var(--pc-y);
     position: absolute;
-    top: 220px;
-    left: 500px;
+    top: 200px;
+    left: 520px;
+    transform: rotateZ(-45deg);
 }
 #contact .figure1 {
     width: 250px;
@@ -71,3 +76,5 @@
     top: 355px;
     left: 1440px;
 }
+
+/*  */
