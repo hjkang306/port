@@ -219,15 +219,6 @@
                 </div>
             </div>
             <details class="effect__img__wrap drag" open>
-                <svg width="200" height="200" class="rotating-text">
-                    <path id="curve" fill="none" 
-                      d="M 20, 90
-                        a 70,70 0 1,1 140,0
-                        a 70,70 0 1,1 -140,0"/>
-                    <text width="1000" font-size="12px" class="svg-text" fill="#F2EEEA" >
-                        <textPath xlink:href="#curve">dhfjdsfhsfhsdkhfs</textPath>
-                    </text>
-                </svg>
                 <summary class="effect__img__tit">javascript</summary>
                 <a href="http://hjkang306.dothome.co.kr/javascript/effect/searchEffect05.html">
                     <img src="assets/img/effect01.jpg" alt="코딩 이미지01">
@@ -591,8 +582,10 @@
     <!-- scroll -->
     <script>
         const aboutImg = document.querySelectorAll(".about__me01__img");
-        const aboutMe01 = document.querySelector(".about__me01__img__inner");
-        let aboutImgInnerTop = aboutMe01.offsetTop;
+        const about = document.querySelector("#about");
+        const aboutMe01 = document.querySelector(".about__me01");
+        let aboutTop = aboutMe01.getBoundingClientRect();
+        console.log(aboutTop)
         
 
         let scrollTop = 0;
@@ -622,8 +615,7 @@
         scroll();
 
         window.addEventListener("resize", ()=>{
-            aboutImgInnerTop = aboutMe01.clientTop;
-            console.log(aboutImgInnerTop);
+            aboutTop = about.getBoundingClientRect();
         })
 
 
