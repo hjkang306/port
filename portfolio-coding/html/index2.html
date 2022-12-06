@@ -77,7 +77,7 @@
         </div>
         <div class="figure__inner">
           <div class="star rotateY">*</div>
-          <div class="hover__txt">hover me !</div>
+          <div class="hover__txt fadeInUp">hover me !</div>
           <div class="figure figure1">
             <div class="sunglass"></div>
             <img src="assets/img/kang01.png" alt="이미지" />
@@ -108,6 +108,12 @@
     <script>
         const notice = document.querySelector(".notice");
         const noticeClose = document.querySelector(".notice__close");
+
+        onload = (event) => {
+            setTimeout(()=>{
+                notice.classList.add("show");
+            }, 2500)
+        }
 
         noticeClose.addEventListener("click", () => {
             notice.classList.remove("show");

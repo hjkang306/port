@@ -1,5 +1,5 @@
 #about {
-    margin-bottom: 200px;
+    margin-bottom: 12vw;
 }
 
 /* about__title__section */
@@ -8,74 +8,74 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 12vw;
 }
 .about__title {
     font-family: var(--font-eng);
     font-weight: 700;
-    font-size: 200px;
+    font-size: 10vw;
     text-transform: uppercase;
     white-space: nowrap;
-    margin-top: 420px;
+    margin-top: 22vw;
 }
 #about .figure__inner {
 }
 /* figure */
 #about .figure {
-    width: 210px;
-    height: 200px;
+    width: 11vw;
+    height: 10vw;
     background-color: var(--pc-y);
 }
 #about .figure1 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 270px;
-    left: -40px;
+    top: 14vw;
+    left: -2.2vw;
     z-index: -1;
 }
 #about .figure2 {
     transform: skewY(25deg);
     position: absolute;
-    top: 270px;
-    left: 190px;
+    top: 14vw;
+    left: 9.8vw;
 }
 #about .figure3 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 270px;
-    left: 420px;
+    top: 14vw;
+    left: 21.8vw;
     z-index: -1;
 }
 #about .figure4 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 167px;
-    left: 650px;
+    top: 8.5vw;
+    left: 33.8vw;
 }
 #about .figure5 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 600px;
-    left: 1070px;
+    top: 31.2vw;
+    left: 55.6vw;
 }
 #about .figure6 {
     transform: skewY(25deg);
     position: absolute;
-    top: 600px;
-    left: 1300px;
+    top: 31.2vw;
+    left: 67.6vw;
 }
 #about .figure7 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 600px;
-    left: 1530px;
+    top: 31.2vw;
+    left: 79.6vw;
     z-index: -1;
 }
 #about .figure8 {
     transform: skewY(25deg);
     position: absolute;
-    top: 600px;
-    left: 1760px;
+    top: 31.2vw;
+    left: 91.6vw;
 }
 
 /* about__me01 */
@@ -83,12 +83,12 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 12vw;
 }
 /* about__me__text */
 .about__me01__text {
     font-family: var(--font-kor2);
-    font-size: 50px;
+    font-size: 2.6vw;
     font-weight: 400;
     line-height: 1.4;
 }
@@ -101,21 +101,21 @@
 
 .about__me01__text01 {
     position: absolute;
-    top: 55px;
-    left: 70px;
+    top: 2.9vw;
+    left: 3.6vw;
 }
 .about__me01__text02 {
     text-align: right;
     position: absolute;
-    top: 2095px;
-    right: 70px;
+    top: 109.15vw;
+    right: 3.6vw;
 }
 
 /* about__me__img__inner */
 .about__me01__img__inner {
     width: 80%;
     margin: 0 auto;
-    padding: 200px 0;
+    padding: 10.4vw 0;
 }
 .about__me01__img {
     display: none;

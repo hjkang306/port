@@ -15,10 +15,10 @@
 .contact__title {
     font-family: var(--font-eng);
     font-weight: 700;
-    font-size: 200px;
+    font-size: 10vw;
     text-transform: uppercase;
     white-space: nowrap;
-    margin-top: 420px;
+    margin-top: 22vw;
 }
 #contact .figure__inner {
 }
@@ -30,55 +30,55 @@
 #contact .star {
     align-items: center;
     font-family: var(--font-eng);
-    font-size: 100px;
+    font-size: 5.5vw;
     font-weight: 100;
     color: var(--pc-y);
     position: absolute;
-    top: 180px;
-    left: 200px;
+    top: 9vw;
+    left: 10vw;
 }
 #contact .hover__txt {
     font-family: var(--font-eng);
-    font-size: 35px;
+    font-size: 2vw;
     font-weight: 300;
     text-transform: uppercase;
     color: var(--pc-y);
     position: absolute;
-    top: 200px;
-    left: 520px;
+    top: 12vw;
+    left: 26vw;
     transform: rotateZ(-45deg);
 }
 #contact .figure1 {
-    width: 250px;
-    height: 250px;
-    top: 206px;
-    left: 230px;
+    width: 12.5vw;
+    height: 12.5vw;
+    top: 12vw;
+    left: 12vw;
 }
 #contact .figure2 {
-    width: 334px;
-    height: 334px;
-    top: 477px;
-    left: 310px;
+    width: 17.5vw;
+    height: 17.5vw;
+    top: 25vw;
+    left: 16.5vw;
 }
 #contact .figure3 {
-    width: 172px;
-    height: 172px;
-    top: 355px;
-    left: 706px;
+    width: 9vw;
+    height: 9vw;
+    top: 19vw;
+    left: 37vw;
     z-index: -1;
 }
 #contact .figure4 {
-    width: 410px;
-    height: 410px;
-    top: 340px;
-    left: 960px;
+    width: 21vw;
+    height: 21vw;
+    top: 17.5vw;
+    left: 50vw;
     z-index: -1;
 }
 #contact .figure5 {
-    width: 210px;
-    height: 210px;
-    top: 355px;
-    left: 1440px;
+    width: 11vw;
+    height: 11vw;
+    top: 18.5vw;
+    left: 75vw  ;
 }
 
 /* contact__address__section */

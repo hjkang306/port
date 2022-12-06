@@ -24,6 +24,10 @@
   opacity: 0;
   animation: fadeInUp 1s 1.5s forwards;
 }
+.fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 1s 1.5s forwards;
+}
 
 @keyframes fadeInUp {
   from {
@@ -50,7 +54,6 @@
   }
 
   90% {
-    opacity: 0
     transform: translate3d(0, 15px, 0) scale3d(1.1, 1.1, 1.1) rotateZ(35deg);
   }
 

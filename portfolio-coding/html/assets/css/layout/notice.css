@@ -42,6 +42,8 @@
 }
 .notice__close {
     display: inline-block;
+    color: var(--white);
+    background: none;
     font-size: 26px;
     margin-top: 10%;
     padding: 3% 10%;
@@ -52,5 +54,5 @@
 }
 .notice__close:hover {
     color: var(--black);
-    background: var(--pc-y);
+    background: var(--white);
 }

@@ -7,6 +7,7 @@
 }
 .header__inner {
   display: flex;
+  align-items: top;
   justify-content: space-between;
 }
 .details__inner {
@@ -20,46 +21,49 @@ details summary::marker {
 details > summary::after {
     content: 'v';
     text-transform: lowercase;
-    font-size: 20px;
+    font-size: 1vw;
     line-height: 1;
 }
-.color__menu > summary::after {margin-left: 30px;}
-.navigation > summary::after {margin-left: 20px;}
+.color__menu > summary::after {margin-left: 3vw;}
+.navigation > summary::after {margin-left: 1.5vw;}
 details[open] > summary::after {
   content: '-';
-  font-size: 24px;
+  font-size: 1.3vw;
 }
 
 /* color */
 .color__menu {
-  width: 180px;
+  width: 10vw;
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
   position: absolute;
   z-index: 10;
 }
-.color__menu:active summary {
+.color__menu summary {
+  border-bottom: 3px solid var(--white);
+}
+.color__menu:hover summary {
   background: var(--black);
   color: var(--white);
 }
-.color__menu[open]:active summary {
+.color__menu[open]:hover summary {
   border-bottom: 3px solid var(--white);
 }
 .color__menu summary {
   background: var(--white);
-  padding: 10px 30px;
+  padding: 0.5vw 1.3vw;
   font-family: var(--font-eng);
   color: var(--black);
   align-items: center;
-  font-size: 24px;
+  font-size: 1.2vw;
   font-weight: 700;
 }
 .color__menu ul {
   padding: 30px;
   font-family: var(--font-eng);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.2vw;
 }
 .color__menu ul li {
   margin-top: 30px;
@@ -77,26 +81,16 @@ details[open] > summary::after {
 }
 
 /* logo */
-.logo {
-  width: 150px;
-  height: 50px;
-}
-.logo a {
-  width: 100%;
-  height: 100%;
-  background-image: url(../../img/logo-yellow.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.logo a:hover {
-  background-image: url(../../img/logo-blue.svg);
+.logo {}
+.logo a {}
+.logo a svg {
+  width: 10vw;
 }
 
 /* nav */
 .navigation {
   float: right;
-  width: 240px;
+  width: 12vw;
   border: 3px solid var(--white);
   box-sizing: border-box;
   text-transform: uppercase;
@@ -104,27 +98,30 @@ details[open] > summary::after {
   right: 0;
   z-index: 10;
 }
-.navigation:active summary {
+.navigation summary {
+  border-bottom: 3px solid var(--white);
+}
+.navigation:hover summary {
   background: var(--black);
   color: var(--white);
 }
-.navigation[open]:active summary {
+.navigation[open]:hover summary {
   border-bottom: 3px solid var(--white);
 }
 .navigation summary {
   background: var(--white);
-  padding: 10px 30px;
+  padding: 0.5vw 1.3vw;
   font-family: var(--font-eng);
   color: var(--black);
   align-items: center;
-  font-size: 24px;
+  font-size: 1.2vw;
   font-weight: 700;
 }
 .navigation ul {
   padding: 30px;
   font-family: var(--font-eng);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.2vw;
 }
 .navigation ul li {
   margin-top: 30px;
