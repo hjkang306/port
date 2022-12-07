@@ -20,6 +20,8 @@
       <a href="#contact">contact 바로 가기</a>
     </div>
     <!-- //skip -->
+
+    <div class="scrollTop"></div>
     
     <div class="notice">
         <h3 class="notice__tit">check point !</h3>
@@ -32,40 +34,46 @@
     <!-- notice -->
 
     <header id="header">
-      <div class="header__inner">
-        <div class="details__inner drag">
-          <details class="color__menu">
-            <summary>color</summary>
-            <ul>
-              <li>red</li>
-              <li>orange</li>
-              <li class="active">yellow</li>
-              <li>green</li>
-              <li>blue</li>
-              <li>purple</li>
-            </ul>
-          </details>
+        <div class="header__inner">
+          <div class="details__inner drag">
+            <details class="color__menu">
+              <summary>color</summary>
+              <ul>
+                <li>red</li>
+                <li>orange</li>
+                <li>yellow</li>
+                <li>green</li>
+                <li>blue</li>
+                <li>purple</li>
+              </ul>
+            </details>
+          </div>
+          <!-- color_menu -->
+  
+          <h1 class="logo drag">
+              <a href="#home">
+                  <svg width="150" height="50" viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M150 0H18.1818L0 25L18.1818 50H150L133.818 25L150 0ZM19.05 42.65C19.2833 42.8833 19.5833 43 19.95 43H25.25C25.6167 43 25.9167 42.8833 26.15 42.65C26.3833 42.4167 26.5 42.1167 26.5 41.75V29.25L37.55 42.05C37.65 42.15 37.85 42.3333 38.15 42.6C38.45 42.8667 38.9 43 39.5 43H42.523H45.75H47.723C48.223 43 48.5897 42.8833 48.823 42.65C49.0564 42.4167 49.2064 42.2 49.273 42L51.423 36.4H65.523L67.673 42C67.7397 42.2 67.8897 42.4167 68.123 42.65C68.3564 42.8833 68.723 43 69.223 43H74.423C74.4396 43 74.4561 42.9997 74.4723 42.9991C74.4908 42.9997 74.5094 43 74.5281 43H79.5781C79.9448 43 80.2448 42.8833 80.4781 42.65C80.7115 42.4167 80.8281 42.1167 80.8281 41.75V21.9L94.1281 42.1C94.2281 42.2 94.3781 42.3833 94.5781 42.65C94.8115 42.8833 95.1781 43 95.6781 43H100.278C100.645 43 100.945 42.8833 101.178 42.65C101.411 42.3833 101.528 42.0833 101.528 41.75V32.2586C101.819 34.1757 102.401 35.8728 103.273 37.35C104.506 39.35 106.223 40.8833 108.423 41.95C110.656 42.9833 113.339 43.5 116.473 43.5C119.573 43.5 122.273 42.9667 124.573 41.9C126.906 40.8 128.689 39.2333 129.923 37.2C131.189 35.1667 131.823 32.7167 131.823 29.85V24.4C131.823 24.0333 131.706 23.7333 131.473 23.5C131.239 23.2667 130.939 23.15 130.573 23.15H118.323C117.989 23.15 117.706 23.2667 117.473 23.5C117.239 23.7333 117.123 24.0333 117.123 24.4V27.6C117.123 27.9333 117.239 28.2333 117.473 28.5C117.706 28.7333 117.989 28.85 118.323 28.85H123.773V30.1C123.773 31.7 123.456 33.0167 122.823 34.05C122.189 35.0833 121.323 35.85 120.223 36.35C119.156 36.8167 117.939 37.05 116.573 37.05C114.473 37.05 112.789 36.4833 111.523 35.35C110.289 34.2167 109.623 32.35 109.523 29.75C109.423 26.7833 109.423 23.8667 109.523 21C109.623 18.5 110.273 16.7 111.473 15.6C112.706 14.5 114.373 13.95 116.473 13.95C117.873 13.95 119.006 14.1667 119.873 14.6C120.739 15.0333 121.423 15.5667 121.923 16.2C122.456 16.8 122.839 17.4 123.073 18C123.206 18.2667 123.356 18.4667 123.523 18.6C123.723 18.7333 123.989 18.8 124.323 18.8H130.523C130.856 18.8 131.123 18.7 131.323 18.5C131.523 18.2667 131.623 18 131.623 17.7C131.589 16.6 131.239 15.45 130.573 14.25C129.906 13.05 128.939 11.95 127.673 10.95C126.406 9.91666 124.839 9.08333 122.973 8.45C121.106 7.81666 118.939 7.5 116.473 7.5C113.406 7.5 110.739 8.03333 108.473 9.1C106.239 10.1333 104.506 11.6333 103.273 13.6C102.401 15.0288 101.819 16.6775 101.528 18.5461V9.25C101.528 8.88333 101.411 8.58333 101.178 8.35C100.945 8.11666 100.645 8 100.278 8H95.1781C94.8448 8 94.5615 8.11666 94.3281 8.35C94.0948 8.58333 93.9781 8.88333 93.9781 9.25V29.75L80.6281 8.9C80.5615 8.76666 80.4115 8.58333 80.1781 8.35C79.9448 8.11666 79.5781 8 79.0781 8H74.5281C74.1615 8 73.8615 8.11666 73.6281 8.35C73.3948 8.58333 73.2781 8.88333 73.2781 9.25V35.7051L63.523 9.35C63.423 8.98333 63.223 8.66667 62.923 8.4C62.623 8.13333 62.2064 8 61.673 8H55.273C54.7397 8 54.323 8.13333 54.023 8.4C53.723 8.66667 53.523 8.98333 53.423 9.35L43.1255 37.1706L32.8 24.75L45.65 9.65C45.7833 9.48333 45.85 9.28333 45.85 9.05C45.85 8.78333 45.75 8.55 45.55 8.35C45.35 8.11666 45.1 8 44.8 8H38.75C38.2167 8 37.7833 8.11666 37.45 8.35C37.15 8.55 36.9333 8.75 36.8 8.95L26.5 20.65V9.25C26.5 8.88333 26.3833 8.58333 26.15 8.35C25.9167 8.11666 25.6167 8 25.25 8H19.95C19.5833 8 19.2833 8.11666 19.05 8.35C18.8167 8.58333 18.7 8.88333 18.7 9.25V41.75C18.7 42.1167 18.8167 42.4167 19.05 42.65ZM63.623 29.95H53.273L58.473 15.55L63.623 29.95Z" fill="#FFB800"/>
+                  </svg>
+              </a>
+          </h1>
+  
+          <nav class="details__inner drag">
+            <details class="navigation" open>
+              <summary>navigation</summary>
+              <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#effect">effect</a></li>
+                <li><a href="#react">react site</a></li>
+                <li><a href="#vue">vue site</a></li>
+                <li><a href="#php">php site</a></li>
+                <li><a href="#contact">contact</a></li>
+              </ul>
+            </details>
+          </nav>
+          <!-- navigation -->
         </div>
-        <!-- color_menu -->
-
-        <h1 class="logo drag"><a href="#home" class="ir">hyeonji's portfolio</a></h1>
-
-        <div class="details__inner drag">
-          <details class="navigation" open>
-            <summary>navigation</summary>
-            <ul>
-              <li><a href="#home">home</a></li>
-              <li><a href="#about">about</a></li>
-              <li><a href="#effect">effect</a></li>
-              <li><a href="#react">react site</a></li>
-              <li><a href="#vue">vue site</a></li>
-              <li><a href="#php">php site</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
-          </details>
-        </div>
-        <!-- navigation -->
-      </div>
     </header>
     <!-- header -->
 
@@ -77,7 +85,7 @@
         </div>
         <div class="figure__inner">
           <div class="star rotateY">*</div>
-          <div class="hover__txt fadeInUp">hover me !</div>
+          <div class="hover__txt">hover me !</div>
           <div class="figure figure1">
             <div class="sunglass"></div>
             <img src="assets/img/kang01.png" alt="이미지" />
@@ -90,6 +98,460 @@
       </section>
       <!-- home -->
 
+      <section id="about">
+        <div class="about__title__section">
+          <div class="move__text__inner">
+            <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
+            <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
+          </div>
+          <div class="figure__inner">
+            <div class="figure figure1"></div>
+            <div class="figure figure2"></div>
+            <div class="figure figure3"></div>
+            <div class="figure figure4"></div>
+            <div class="figure figure5"></div>
+            <div class="figure figure6"></div>
+            <div class="figure figure7"></div>
+            <div class="figure figure8"></div>
+          </div>
+        </div>
+        <!-- about__title__section -->
+
+        <div class="about__me01">
+          <div class="about__me01__text about__me01__text01">
+            • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="point__color">식물</span> 키우기<br>
+            <span class="point__color">뜨개질로</span> 작은 소품 만들기<br>
+            좋아하는 <span class="point__color">노래</span> 많이 듣기<br>
+            애정하는 뮤지션 <span class="point__color">공연</span> 보기<br>
+            그리고 싶은 <span class="point__color">그림</span> 그리기<br>
+            <span class="point__color">긍정적</span>으로 생각하기<br>
+            작은 것에 <span class="point__color">행복</span>해하기
+          </div>
+          <div class="about__me01__text about__me01__text02">
+            <span class="point__color">차분히</span> 생각하기<br>
+            조금씩 꾸준히 <span class="point__color">노력하기</span><br>
+            잘 풀리지 않아도 포기하지 않기
+          </div>
+          <div class="about__me01__img__inner">
+            <img class="about__me01__img about__me01__img1 show" src="assets/img/me01.jpg" alt="내 모습 이미지 01"></img>
+            <img class="about__me01__img about__me01__img2" src="assets/img/me02.jpg" alt="내 모습 이미지 02"></img>
+            <img class="about__me01__img about__me01__img3" src="assets/img/me03.jpg" alt="내 모습 이미지 03"></img>
+          </div>
+        </div>
+        <!-- about__me01 -->
+
+        <div class="about__me02 container">
+            <div class="about__me02__text">
+                <div class="about__me02__text__tit">
+                    성실하고 열정이 있는 인재, <span class="point__color">도전과 노력으로</span> 일하는 사람,<br>
+                    가장 빛나는 전문가가 되기 위하여, 마음 먹은 일은<br>
+                    꼭 하고 마는 사람
+                </div>
+                <p class="about__me02__text__desc">
+                    “인내의 기술을 배워라. 목표를 달성할 수 있을지 마음이 불안해 질 때,<br>
+                    단련한 대로 마음을 다스려라. 인내하지 못하면 긴장감과 두려움이 생기고<br>
+                    낙담해 실패한다. 인내할 줄 알아야 자신감, 결단력, 합리적 시각이<br>
+                    생겨서 끝내 성공할 수 있다.”<br>
+                    - 브라이언 아담스 -
+                </p>
+            </div>
+            <div class="about__me02__img__inner">
+                <details class="about__me02__img__wrap about__me02__img__wrap01 drag" open>
+                    <summary class="about__me02__img__tit">It’s me!</summary>
+                    <img src="assets/img/me04.jpg" alt="내 모습 이미지 04">
+                </details>
+                <details class="about__me02__img__wrap about__me02__img__wrap02 drag" open>
+                    <summary class="about__me02__img__tit">It’s me!</summary>
+                    <img src="assets/img/me05.jpg" alt="내 모습 이미지 05">
+                </details>
+            </div>
+        </div>
+      </section>
+      <!-- about -->
+
+      <section id="effect">
+        <div class="effect__title__section">
+            <div class="move__text__inner">
+                <h3 class="effect__title animation01">javascript • Effect • javascript • Effect •&nbsp;</h3>
+                <h3 class="effect__title animation01">javascript • Effect • javascript • Effect •&nbsp;</h3>
+            </div>
+            <div class="figure__inner">
+                <div class="figure figure1"></div>
+                <div class="figure figure2"></div>
+                <div class="figure figure3"></div>
+                <div class="figure figure4"></div>
+                <div class="figure figure5"></div>
+                <div class="figure figure6"></div>
+                <div class="figure figure7"></div>
+                <div class="figure figure8"></div>
+            </div>
+        </div>
+        <!-- effect__title__section -->
+
+        <div id="search__effect" class="effect__section section container">
+            <p class="effect__desc">
+                indexOf(), search() 등 문자열과 관련된 메서드를 이용하여 검색어를 입력하면 결과가 나오는, 검색을 할 수 있는 효과를 만들어 보았습니다.
+            </p>
+            <h3 class="effect__tit">
+                <em>SEARCH</em><br>
+                Effect
+            </h3>
+            <div class="effect__decos">
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        search
+                    </div>
+                </div>
+            </div>
+            <details class="effect__img__wrap drag" open>
+                <summary class="effect__img__tit">javascript</summary>
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/searchEffect05.html" target="_black">
+                    <img src="assets/img/effect01.jpg" alt="코딩 이미지01">
+                </a>
+            </details>
+        </div>
+        <!-- search__effect -->
+
+        <div id="quiz__effect" class="effect__section section container">
+            <p class="effect__desc">
+                배열과 객체를 활용하여 각각의 요소에 문제를 출력하고, 메서드를 사용하여 정답을 확인하고 점수를 출력하는 효과를 만들어 보았습니다.
+            </p>
+            <h3 class="effect__tit">
+                <em>quiz</em><br>
+                Effect
+            </h3>
+            <div class="effect__decos">
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        quiz
+                    </div>
+                </div>
+            </div>
+            <details class="effect__img__wrap drag" open>
+                <summary class="effect__img__tit">javascript</summary>
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/quizEffect05.html" target="_black">
+                    <img src="assets/img/effect02.jpg" alt="코딩 이미지02">
+                </a>
+            </details>
+        </div>
+        <!-- quiz__effect -->
+
+        <div id="mouse__effect" class="effect__section section container">
+            <p class="effect__desc">
+                마우스 커서의 위치를 구하고 해당하는 값을 이용하여 이미지나 글씨를 움직이고, 마우스를 따라다니는 원을 만들어보았습니다.
+            </p>
+            <h3 class="effect__tit">
+                <em>mouse</em><br>
+                Effect
+            </h3>
+            <div class="effect__decos">
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        mouse
+                    </div>
+                </div>
+            </div>
+            <details class="effect__img__wrap drag" open>
+                <summary class="effect__img__tit">javascript</summary>
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/mouseEffect01.html" target="_black">
+                    <img src="assets/img/effect03.jpg" alt="코딩 이미지03">
+                </a>
+            </details>
+        </div>
+        <!-- mouse__effect -->
+
+        <div id="slider__effect" class="effect__section section container">
+            <p class="effect__desc">
+                이미지를 좌우로 넘기거나, 자동으로 넘어가는 슬라이드 효과를 자바스크립트로 만들어 보았습니다.
+            </p>
+            <h3 class="effect__tit">
+                <em>slider</em><br>
+                Effect
+            </h3>
+            <div class="effect__decos">
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        slider
+                    </div>
+                </div>
+            </div>
+            <details class="effect__img__wrap drag" open>
+                <summary class="effect__img__tit">javascript</summary>
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/sliderEffect01.html" target="_black">
+                    <img src="assets/img/effect04.jpg" alt="코딩 이미지04">
+                </a>
+            </details>
+        </div>
+        <!-- slider__effect -->
+
+        <div id="parallax__effect" class="effect__section section container">
+            <p class="effect__desc">
+                페이지에서 스크롤 값에 따라 글씨가 나타나거나 메뉴가 사라지고, 이미지의 이질감이 느껴지는 등의 패럴랙스 효과를 만들어 보았습니다.
+            </p>
+            <h3 class="effect__tit">
+                <em>parallax</em><br>
+                Effect
+            </h3>
+            <div class="effect__decos">
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        parallax
+                    </div>
+                </div>
+            </div>
+            <details class="effect__img__wrap drag" open>
+                <summary class="effect__img__tit">javascript</summary>
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/parallaxEffect01.html" target="_black">
+                    <img src="assets/img/effect05.jpg" alt="코딩 이미지05">
+                </a>
+            </details>
+        </div>
+        <!-- parallax__effect -->
+
+        <div id="game__effect" class="effect__section section container">
+            <p class="effect__desc">
+                공부한 자바스크립트 지식을 총 출동하여 테트리스, 카드 뒤집기, 용어 맞추기 등의 간단한 게임 효과를 만들어 보았습니다.
+            </p>
+            <h3 class="effect__tit">
+                <em>game</em><br>
+                Effect
+            </h3>
+            <div class="effect__decos">
+                <div class="effect__deco01">
+                    <svg width="151" height="71" viewBox="0 0 151 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M0.950928 0.973877H150.951V16.604C142.325 18.8242 135.951 26.6547 135.951 35.9739C135.951 45.2931 142.325 53.1236 150.951 55.3438V70.9739H0.950928L0.950928 55.3438C9.57706 53.1236 15.9509 45.2931 15.9509 35.9739C15.9509 26.6547 9.57706 18.8242 0.950928 16.604L0.950928 0.973877Z" 
+                        fill="#FF8A00"/>
+                    </svg>
+                    <div class="effect__deco01__txt">
+                        effect
+                    </div>
+                </div>
+                <div class="effect__deco02">
+                    <svg width="223" height="71" viewBox="0 0 223 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path 
+                        d="M30.9051 2.2575C31.8523 1.22147 33.1914 0.631348 34.5952 0.631348H217.392C220.153 0.631348 222.392 2.86992 222.392 5.63135V65.6313C222.392 68.3928 220.153 70.6313 217.392 70.6313H34.5952C33.1914 70.6313 31.8523 70.0412 30.9051 69.0052L3.47651 39.0052C1.73003 37.095 1.73003 34.1677 3.4765 32.2575L30.9051 2.2575Z" 
+                        fill="#FFB800"/>
+                    </svg>
+                    <div class="effect__deco02__txt">
+                        game
+                    </div>
+                </div>
+            </div>
+            <details class="effect__img__wrap drag" open>
+                <summary class="effect__img__tit">javascript</summary>
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/gameEffect01.html" target="_black">
+                    <img src="assets/img/effect06.jpg" alt="코딩 이미지06">
+                </a>
+            </details>
+        </div>
+        <!-- game__effect -->
+      </section>
+      <!-- effect -->
+
+      <section id="react">
+        <div class="react__wrap">
+            <div class="react__section__inner">
+                <div class="react__section react__section01">
+                    <div class="move__text__inner">
+                        <h3 class="react__section__tit animation01">REACT • SITE • REACT •  API •&nbsp;</h3>
+                        <h3 class="react__section__tit animation01">REACT • SITE • REACT •  API •&nbsp;</h3>
+                    </div>
+                    <div class="figure__inner">
+                        <div class="figure figure1"></div>
+                        <div class="figure figure2"></div>
+                        <div class="figure figure3"></div>
+                        <div class="figure figure4"></div>
+                        <div class="figure figure5"></div>
+                        <div class="figure figure6"></div>
+                        <div class="figure figure7"></div>
+                    </div>
+                    <img src="assets/img/reactApi.png" alt="리액트 목업 이미지">
+                </div>
+                <div class="react__section react__section02">
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- react -->
+
+      <section id="vue">
+        <div class="vue__wrap">
+            <div class="vue__section__inner">
+                <div class="vue__section vue__section01">
+                    <div class="move__text__inner">
+                        <h3 class="vue__section__tit animation01">VUE • SITE • VUE •  API •&nbsp;</h3>
+                        <h3 class="vue__section__tit animation01">VUE • SITE • VUE •  API •&nbsp;</h3>
+                    </div>
+                    <div class="figure__inner">
+                        <div class="figure figure1"></div>
+                        <div class="figure figure2"></div>
+                        <div class="figure figure3"></div>
+                        <div class="figure figure4"></div>
+                        <div class="figure figure5"></div>
+                        <div class="figure figure6"></div>
+                        <div class="figure figure7"></div>
+                    </div>
+                    <img src="assets/img/vueApi.png" alt="리액트 목업 이미지">
+                </div>
+                <div class="vue__section vue__section02">
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- vue -->
+
+      <section id="php">
+        <div class="php__wrap">
+            <div class="php__section__inner">
+                <div class="php__section php__section01">
+                    <div class="move__text__inner">
+                        <h3 class="php__section__tit animation01">PHP • SITE • PHP • SITE •&nbsp;</h3>
+                        <h3 class="php__section__tit animation01">PHP • SITE • PHP • SITE •&nbsp;</h3>
+                    </div>
+                    <div class="figure__inner">
+                        <div class="figure figure1"></div>
+                        <div class="figure figure2"></div>
+                        <div class="figure figure3"></div>
+                        <div class="figure figure4"></div>
+                        <div class="figure figure5"></div>
+                        <div class="figure figure6"></div>
+                        <div class="figure figure7"></div>
+                    </div>
+                    <img src="assets/img/phpProject.png" alt="리액트 목업 이미지">
+                </div>
+                <div class="php__section php__section02">
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- php -->
+
+      <footer id="contact">
+        <div class="contact__title__section">
+            <div class="move__text__inner">
+              <h3 class="contact__title animation01">CONTACT • CONTACT •&nbsp;</h3>
+              <h3 class="contact__title animation01">CONTACT • CONTACT •&nbsp;</h3>
+            </div>
+            <div class="figure__inner">
+                <div class="star rotateY">*</div>
+                <div class="hover__txt">thank you !</div>
+                <div class="figure figure1"></div>
+                <div class="figure figure2"></div>
+                <div class="figure figure3"></div>
+                <div class="figure figure4"></div>
+                <div class="figure figure5"></div>
+            </div>
+        </div>
+        <div class="contact__address__section container">
+            <div class="contact__tag">
+                <svg
+                    width="279"
+                    height="70"
+                    viewBox="0 0 279 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 5C0 2.23857 2.23858 0 5 0H247.477C248.93 0 250.311 0.631969 251.261 1.73144L277.176 31.7314C278.798 33.6088 278.798 36.3913 277.176 38.2686L251.261 68.2686C250.311 69.368 248.93 70 247.477 70H5C2.23858 70 0 67.7614 0 65V35V5Z"
+                        fill="#FFB800"
+                    />
+                </svg>
+                <div class="contact__tag__txt">CONTACT ME !</div>
+            </div>
+            <ul>
+                <li>
+                    <div class="contact__tag__tit">Email</div>
+                    <a href="mailto:hjkang306@gmail.com">hjkang306@gmail.com</a>
+                </li>
+                <li>
+                    <div class="contact__tag__tit">Blog</div>
+                    <a href="hjkang306.tistory.com">hjkang306.tistory.com</a>
+                </li>
+                <li>
+                    <div class="contact__tag__tit">Github</div>
+                    <a href="github.com/hjkang306">github.com/hjkang306</a>
+                </li>
+            </ul>
+        </div>
+      </footer>
+      <!-- contact -->
+
     </main>
 
 
@@ -99,6 +561,8 @@
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="assets/js/color.js"></script>
     <script>
       $(".drag").draggable({ opacity: 0.8 });
@@ -120,5 +584,87 @@
             document.body.classList.remove("fixed")
         })
     </script>
+
+    <!-- scroll -->
+    <script>
+      const aboutImg = document.querySelectorAll(".about__me01__img");
+      const about = document.querySelector("#about");
+      const aboutMe01 = document.querySelector(".about__me01");
+      let aboutTop = aboutMe01.getBoundingClientRect();
+      console.log(aboutTop)
+      
+
+      let scrollTop = 0;
+      // 스크롤 값
+      function scroll() {
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+          requestAnimationFrame(scroll);
+
+          if (scrollTop > 2900 && scrollTop < 3500){
+              aboutImg.forEach(e => {
+                  e.classList.remove("show");
+              });
+              aboutImg[1].classList.add("show");
+          } else if (scrollTop >= 3500) {
+              aboutImg.forEach(e => {
+                  e.classList.remove("show");
+              });
+              aboutImg[2].classList.add("show");
+          } else {
+              aboutImg.forEach(e => {
+                  e.classList.remove("show");
+              });
+              aboutImg[0].classList.add("show");
+          }
+      }
+      scroll();
+
+      window.addEventListener("resize", ()=>{
+          aboutTop = about.getBoundingClientRect();
+      })
+
+
+      // gsap
+      gsap.registerPlugin(ScrollTrigger);
+
+      const sections01 = gsap.utils.toArray(".react__section");
+      const sections02 = gsap.utils.toArray(".vue__section");
+      const sections03 = gsap.utils.toArray(".php__section");
+
+      gsap.to(sections01, {
+          xPercent: -100 * (sections01.length -1),
+          ease: "none",
+          scrollTrigger: {
+              trigger: ".react__wrap",
+              pin: true,
+              scrub: 1,
+              end: "+=4000",
+              markers: true,
+          }
+      });
+      gsap.to(sections02, {
+          xPercent: -100 * (sections02.length -1),
+          ease: "none",
+          scrollTrigger: {
+              trigger: ".vue__wrap",
+              pin: true,
+              scrub: 1,
+              end: "+=4000",
+              markers: true,
+          }
+      });
+      gsap.to(sections03, {
+          xPercent: -100 * (sections03.length -1),
+          ease: "none",
+          scrollTrigger: {
+              trigger: ".php__wrap",
+              pin: true,
+              scrub: 1,
+              end: "+=4000",
+              markers: true,
+          }
+      });
+  </script>
   </body>
 </html>

@@ -2,78 +2,78 @@
 }
 .effect__title__section {
     width: 100%;
-    height: 100vh;
+    height: 56.25vw;
     overflow: hidden;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 12vw;
 }
 .effect__title {
     font-family: var(--font-eng);
     font-weight: 700;
-    font-size: 200px;
+    font-size: 10vw;
     text-transform: uppercase;
     white-space: nowrap;
-    margin-top: 420px;
+    margin-top: 22vw;
 }
 .figure__inner {
 }
 
 /* figure */
 #effect .figure {
-    width: 210px;
-    height: 200px;
+    width: 11vw;
+    height: 10vw;
     background-color: var(--pc-y);
 }
 #effect .figure1 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 270px;
-    left: -40px;
+    top: 14vw;
+    left: -2.2vw;
     z-index: -1;
 }
 #effect .figure2 {
     transform: skewY(25deg);
     position: absolute;
-    top: 270px;
-    left: 190px;
+    top: 14vw;
+    left: 9.8vw;
 }
 #effect .figure3 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 270px;
-    left: 420px;
+    top: 14vw;
+    left: 21.8vw;
     z-index: -1;
 }
 #effect .figure4 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 167px;
-    left: 650px;
+    top: 8.5vw;
+    left: 33.8vw;
 }
 #effect .figure5 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 600px;
-    left: 1070px;
+    top: 31.2vw;
+    left: 55.6vw;
 }
 #effect .figure6 {
     transform: skewY(25deg);
     position: absolute;
-    top: 600px;
-    left: 1300px;
+    top: 31.2vw;
+    left: 67.6vw;
 }
 #effect .figure7 {
     transform: skewY(-25deg);
     position: absolute;
-    top: 600px;
-    left: 1530px;
+    top: 31.2vw;
+    left: 79.6vw;
     z-index: -1;
 }
 #effect .figure8 {
     transform: skewY(25deg);
     position: absolute;
-    top: 600px;
-    left: 1760px;
+    top: 31.2vw;
+    left: 91.6vw;
 }
 
 /* effect */
@@ -91,33 +91,36 @@
     position: relative;
 }
 .effect__desc {
-    width: 373px;
-    font-size: 24px;
+    width: 19.5vw;
+    font-size: 1.2vw;
     font-weight: 300;
     line-height: 1.4;
     letter-spacing: -0.05em;
     text-align: justify;
-    padding-top: 195px;
-    margin-bottom: 295px;
+    padding-top: 10vw;
+    margin-bottom: 15vw;
 }
 .effect__tit {
     font-family: var(--font-eng);
-    font-size: 80px;
+    font-size: 4vw;
     font-weight: 400;
+    position: absolute;
+    z-index: 2;
+    mix-blend-mode: difference;
 }
 .effect__tit em {
     text-transform: uppercase;
-    font-size: 120px;
+    font-size: 6.5vw;
 }
 
 .effect__decos {
     font-family: var(--font-eng);
-    font-size: 30px;
+    font-size: 1.5vw;
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
     position: absolute;
-    top: 80px;
+    top: 4vw;
     right: 0;
 }
 
@@ -128,61 +131,75 @@
 }
 /* .effect__deco01 */
 .effect__deco01 {
-    width: 150px;
-    height: 70px;
+    width: 8vw;
     transform: rotateZ(-13deg);
     position: absolute;
-    right: 280px;
+    right: 15vw;
     transition: transform .5s;
 }
 .effect__deco01 svg {
+    width: 8vw;
+    height: 3.5vw;
     position: absolute;
     z-index: -1;
 }
 .effect__deco01__txt {
     text-align: center;
-    line-height: 70px;
+    line-height: 3.5vw;
 }
 
 /* .effect__deco02 */
 .effect__deco02 {
-    width: 222px;
-    height: 70px;
+    width: 12vw;
     transform: rotateZ(-25deg);
     position: absolute;
-    top: 60px;
-    right: 87px;
+    top: 3vw;
+    right: 4vw;
     z-index: 1;
     transition: transform .5s;
 }
 .effect__deco02 svg {
+    width: 12vw;
+    height: 3.5vw;
     position: absolute;
     z-index: -1;
 }
 .effect__deco02__txt {
     text-align: center;
-    line-height: 70px;
+    line-height: 3.5vw;
 }
 
 .effect__img__wrap {
     width: 65%;
     position: absolute;
-    top: 195px;
-    right: 0px;
+    top: 10vw;
+    right: 0;
     border: 3px solid var(--white);
 }
 .effect__img__tit {
     background: var(--white);
     color: var(--black);
     font-family: var(--font-eng);
-    font-size: 28.8px;
+    font-size: 1.4vw;
     font-weight: 700;
+    padding: 1vw 1.5vw;
     text-transform: uppercase;
-    padding: 10px 36px 17px;
 }
 .effect__img__tit::after {
-    margin-left: 79%;
-    font-size: 28px;
+    float: right;
+    font-size: 1.2vw;
+    margin-top: 0.3vw;
 }
 .effect__img__wrap img {}
+
+@media (max-width: 970px){
+    .effect__desc {
+        width: 25vw;
+    }
+}
+@media (max-width: 700px){
+    .effect__desc {
+        width: 25vw;
+    }
+}
 

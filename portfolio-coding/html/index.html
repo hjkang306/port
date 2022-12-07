@@ -220,7 +220,7 @@
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <a href="http://hjkang306.dothome.co.kr/javascript/effect/searchEffect05.html">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/searchEffect05.html" target="_black">
                     <img src="assets/img/effect01.jpg" alt="코딩 이미지01">
                 </a>
             </details>
@@ -259,7 +259,7 @@
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <a href="http://hjkang306.dothome.co.kr/javascript/effect/quizEffect05.html">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/quizEffect05.html" target="_black">
                     <img src="assets/img/effect02.jpg" alt="코딩 이미지02">
                 </a>
             </details>
@@ -298,7 +298,7 @@
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <a href="http://hjkang306.dothome.co.kr/javascript/effect/mouseEffect01.html">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/mouseEffect01.html" target="_black">
                     <img src="assets/img/effect03.jpg" alt="코딩 이미지03">
                 </a>
             </details>
@@ -337,7 +337,7 @@
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <a href="http://hjkang306.dothome.co.kr/javascript/effect/sliderEffect01.html">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/sliderEffect01.html" target="_black">
                     <img src="assets/img/effect04.jpg" alt="코딩 이미지04">
                 </a>
             </details>
@@ -376,7 +376,7 @@
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <a href="http://hjkang306.dothome.co.kr/javascript/effect/parallaxEffect01.html">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/parallaxEffect01.html" target="_black">
                     <img src="assets/img/effect05.jpg" alt="코딩 이미지05">
                 </a>
             </details>
@@ -415,7 +415,7 @@
             </div>
             <details class="effect__img__wrap drag" open>
                 <summary class="effect__img__tit">javascript</summary>
-                <a href="http://hjkang306.dothome.co.kr/javascript/effect/gameEffect01.html">
+                <a href="http://hjkang306.dothome.co.kr/javascript/effect/gameEffect01.html" target="_black">
                     <img src="assets/img/effect06.jpg" alt="코딩 이미지06">
                 </a>
             </details>
@@ -659,31 +659,6 @@
                 markers: true,
             }
         });
-    </script>
-
-    <!-- text curve -->
-    <script>
-        function curvedText(time) {
-        let tl   = new TimelineMax({ repeat: -1 });
-        let text = document.querySelector('svg textpath'),
-            path = document.querySelector('svg defs path');
-
-        let from = {
-            transformOrigin: 'center center',
-            rotation: 0
-        };
-
-        let to = {
-            rotation: 360,
-            ease: Linear.easeInOut
-        };
-
-        tl.fromTo([text, path], time, from, to);
-
-        return tl;
-        }
-
-        curvedText(20);
     </script>
   </body>
 </html>
