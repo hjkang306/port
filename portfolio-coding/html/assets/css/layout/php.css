@@ -19,6 +19,7 @@
     width: 200%;
     margin-top: 250px;
     z-index: 1;
+    pointer-events: none;
 }
 .php__section__tit {
     font-family: var(--font-eng);
@@ -34,9 +35,38 @@
 .php__section .figure__inner {
 }
 .php__section .figure {
+    position: relative;
     border-radius: 50%;
     background-color: var(--pc-y);
     position: absolute;
+    overflow: hidden;
+}
+.php__section .figure .figureImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-position: center center;
+    position: absolute;
+    transform: scale(0);
+    transition: all .3s cubic-bezier(0.87,-0.04, 0.45, 1);
+}
+.php__section .figure:hover .figureImg {
+    transform: scale(1);
+}
+.php__section .figure1 .figureImg {
+    background-position: top left;
+    background-image: url(../../img/php01.png);
+}
+.php__section .figure3 .figureImg {
+    background-image: url(../../img/php02.png);
+}
+.php__section .figure6 .figureImg {
+    background-position: top left;
+    background-image: url(../../img/php03.png);
+}
+.php__section .figure7 .figureImg {
+    background-position: top left;
+    background-image: url(../../img/php04.png);
 }
 .php__section .figure1 {
     width: 740px;

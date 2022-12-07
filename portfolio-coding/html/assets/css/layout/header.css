@@ -23,9 +23,11 @@ details > summary::after {
     text-transform: lowercase;
     font-size: 1vw;
     line-height: 1;
+    float: right;
+    margin-top: 0.2vw;
 }
-.color__menu > summary::after {margin-left: 3vw;}
-.navigation > summary::after {margin-left: 1.5vw;}
+/* .color__menu > summary::after {margin-left: 3vw;}
+.navigation > summary::after {margin-left: 1.5vw;} */
 details[open] > summary::after {
   content: '-';
   font-size: 1.3vw;
@@ -82,9 +84,12 @@ details[open] > summary::after {
 
 /* logo */
 .logo {}
-.logo a {}
+.logo a {
+  height: 3.6vw;
+}
 .logo a svg {
   width: 10vw;
+  height: 3.6vw;
 }
 
 /* nav */
@@ -130,4 +135,13 @@ details[open] > summary::after {
   margin-top: 0;
 }
 .navigation ul li a {
+}
+
+@media (max-width: 1200px){
+  .color__menu {
+    width: 13vw;
+  }
+  .navigation {
+    width: 15vw;
+  }
 }

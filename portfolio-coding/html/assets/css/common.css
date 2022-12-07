@@ -51,3 +51,15 @@ img {
     z-index: 2;
     background: #0006;
 }
+
+/* cursor */
+.mouse__cursor {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background: var(--white);
+    mix-blend-mode: difference;
+    position: absolute;
+    z-index: 50;
+    transform: translate(-50%, -50%);
+}

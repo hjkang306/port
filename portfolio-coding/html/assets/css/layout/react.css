@@ -16,6 +16,7 @@
     height: 100vh;
 }
 .react__section .move__text__inner {
+    pointer-events: none;
     width: 200%;
     margin-top: 250px;
     z-index: 1;
@@ -34,10 +35,37 @@
 .react__section .figure__inner {
 }
 .react__section .figure {
+    position: relative;
     border-radius: 50%;
     background-color: var(--pc-y);
     position: absolute;
+    overflow: hidden;
 }
+.react__section .figure .figureImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-position: center center;
+    position: absolute;
+    transform: scale(0);
+    transition: all .3s cubic-bezier(0.87,-0.04, 0.45, 1);
+}
+.react__section .figure:hover .figureImg {
+    transform: scale(1);
+}
+.react__section .figure1 .figureImg {
+    background-image: url(../../img/react01.png);
+}
+.react__section .figure3 .figureImg {
+    background-image: url(../../img/react02.png);
+}
+.react__section .figure6 .figureImg {
+    background-image: url(../../img/react03.png);
+}
+.react__section .figure7 .figureImg {
+    background-image: url(../../img/react04.png);
+}
+
 .react__section .figure1 {
     width: 740px;
     height: 740px;

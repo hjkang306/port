@@ -11,51 +11,294 @@
                 margin: 0;
                 padding: 0;
             }
-            .tag {
-                width: 10%;
-                height: 70px;
-                position: relative;
-                cursor: pointer;
-            }
-            .tag svg {
-                width: 100%;
+
+            body #close strong.circle {
                 position: absolute;
-                z-index: -1;
+                left: 0;
+                top: 0;
             }
-            .tag svg path {}
-            .txt {
+            body #close strong.circle span.word span.char:before {
+                color: #fe4e01;
+            }
+            body #close strong.circle span.word span.char:nth-of-type(1) {
+                transform: rotate(0deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(2) {
+                transform: rotate(45deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(3) {
+                transform: rotate(90deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(4) {
+                transform: rotate(135deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(5) {
+                transform: rotate(180deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(6) {
+                transform: rotate(225deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(7) {
+                transform: rotate(270deg);
+            }
+            body #close strong.circle span.word span.char:nth-of-type(8) {
+                transform: rotate(315deg);
+            }
+            body strong.circle {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                line-height: 1;
+                margin: 0;
+                transition: 0.3s ease-in-out;
+            }
+            body strong.circle:before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background: #eeece5;
+                top: calc(50% - 1px);
+                left: 5px;
+                transition: 0.3s ease-in-out;
+                transform-origin: left;
+                transform: scaleX(0);
+                transition-delay: 0.6s;
+            }
+            body strong.circle span.word {
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                left: 50%;
+                top: 50%;
+                -webkit-animation: rotate 10s linear infinite;
+                animation: rotate 10s linear infinite;
+                -webkit-animation-play-state: paused;
+                animation-play-state: paused;
+            }
+            @-webkit-keyframes rotate {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotate {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            body strong.circle span.word span.char {
+                font-size: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: calc(50% - 5px);
+                top: calc(50% - 30px);
+                width: 10px;
+                height: 10px;
+                transform-origin: 50% 30px;
+                overflow: hidden;
+                color: transparent;
+            }
+            body strong.circle span.word span.char:before {
+                content: attr(data-char);
+                position: absolute;
                 width: 100%;
                 height: 100%;
-                text-align: center;
-                line-height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #08350e;
+                transform: translateY(100%);
+                transition: 0.3s ease-in-out;
+            }
+            body strong.circle span.word span.char:nth-of-type(1) {
+                transform: rotate(0deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(2) {
+                transform: rotate(40deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(3) {
+                transform: rotate(80deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(4) {
+                transform: rotate(120deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(5) {
+                transform: rotate(160deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(6) {
+                transform: rotate(200deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(7) {
+                transform: rotate(240deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(8) {
+                transform: rotate(280deg);
+            }
+            body strong.circle span.word span.char:nth-of-type(9) {
+                transform: rotate(320deg);
+            }
+
+            body:hover #cursor {
+                opacity: 1;
+            }
+            body #cursor {
+                position: fixed;
+                z-index: 97;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                top: 0%;
+                left: 0%;
+                border: 2px solid #a58725;
+                box-shadow: inset 0 0 0 0 #a58725;
+                pointer-events: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform-style: preserve-3d;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                will-change: transform;
+                transition: opacity 0.3s ease-in-out,
+                    border-width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                opacity: 0;
+            }
+            body #cursor:before,
+            body #cursor:after {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 2px;
+                background: #eeece5;
+                top: calc(50% - 1px);
+                left: 14px;
+                transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transition-delay: 0.3s;
+                transform-origin: right;
+                transform: scaleY(0) rotate(0deg);
+                z-index: 9;
+            }
+            body #cursor.linkhover {
+                border-color: transparent;
+                border-width: 4px;
+                box-shadow: 0 0 0 2px #fe4e01;
+            }
+            body #cursor.active strong.circle span.word {
+                -webkit-animation-play-state: running;
+                animation-play-state: running;
+            }
+            body #cursor.active:before,
+            body #cursor.active:after {
+                transition-delay: 0.6s;
+            }
+            body #cursor.active:before {
+                transform: scaleY(1) rotate(-45deg);
+            }
+            body #cursor.active:after {
+                transform: scaleY(1) rotate(45deg);
+            }
+            body #cursor.active strong {
+                box-shadow: inset 0 0 0 20px #a58725;
+            }
+            body #cursor.active strong:before {
+                transform: scaleX(1);
+                transition-delay: 0.3s;
+            }
+            body #cursor.active strong span.word span.char:before {
+                transform: translateY(0px);
             }
         </style>
     </head>
     <body>
-        <div class="tag">
-            <svg
-                width="279"
-                height="70"
-                viewBox="0 0 279 70"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M0 5C0 2.23857 2.23858 0 5 0H247.477C248.93 0 250.311 0.631969 251.261 1.73144L277.176 31.7314C278.798 33.6088 278.798 36.3913 277.176 38.2686L251.261 68.2686C250.311 69.368 248.93 70 247.477 70H5C2.23858 70 0 67.7614 0 65V35V5Z"
-                    fill="#1859FF"
-                />
-            </svg>
-            <div class="txt">CONTACT</div>
+        <div id="cursor">
+            <strong class="circle" data-splitting="chars">SEE•MORE•</strong>
         </div>
 
-        <script>
-            const tag = document.querySelector(".tag");
-            const svg = document.querySelector(".tag svg path");
+        <a href="#">link link link link</a>
+        <a href="#">link link link link</a>
+        <a href="#">link link link link</a>
+        <a href="#">link link link link</a>
 
-            tag.addEventListener("click", ()=>{
-                console.log(svg.getAttribute("fill"));
-                svg.setAttribute("fill", "red");
-            })
+        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/splitting@1.0.5/dist/splitting.min.js"></script>
+        <script>
+            let cursor = document.getElementById("cursor");
+            let close = document.getElementById("close");
+            let body = document.body;
+            let links = document.getElementsByTagName("a");
+
+            // hover events for social links
+
+            for (link of links) {
+                link.addEventListener("mouseover", function (event) {
+                    cursor.classList.add("linkhover");
+                });
+                link.addEventListener("mousemove", function (event) {
+                    cursor.classList.add("linkhover");
+                });
+                link.addEventListener("mouseout", function (event) {
+                    cursor.classList.remove("linkhover");
+                });
+            }
+
+            // Escape key option to exit active state
+
+            document.onkeydown = function (evt) {
+                evt = evt || window.event;
+                let isEscape = false;
+                if ("key" in evt) {
+                    isEscape = evt.key === "Escape" || evt.key === "Esc";
+                } else {
+                    isEscape = evt.keyCode === 27;
+                }
+                if (isEscape) {
+                    body.classList.remove("active");
+                    setTimeout(() => {
+                        iframe.setAttribute("src", "");
+                    }, 2000);
+                }
+            };
+
+            gsap.set("#cursor", { xPercent: -50, yPercent: -50 });
+            const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+            const mouse = { x: pos.x, y: pos.y };
+            const speed = 0.35;
+
+            const xSet = gsap.quickSetter(cursor, "x", "px");
+            const ySet = gsap.quickSetter(cursor, "y", "px");
+
+            window.addEventListener("mousemove", (e) => {
+                mouse.x = e.x;
+                mouse.y = e.y;
+            });
+
+            gsap.ticker.add(() => {
+                const dt =
+                    1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+                pos.x += (mouse.x - pos.x) * dt;
+                pos.y += (mouse.y - pos.y) * dt;
+                xSet(pos.x);
+                ySet(pos.y);
+            });
+
+            Splitting();
+
+            
+
+            // Set a delay on Scrolltrigger recalculation to accommodate element transition times
+
+            function refresh() {
+                setTimeout(() => {
+                    ScrollTrigger.refresh();
+                }, 2500);
+            }
+
+            window.addEventListener("resize", refresh);
         </script>
     </body>
 </html>
