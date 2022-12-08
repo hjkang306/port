@@ -11,6 +11,8 @@
     margin-bottom: 12vw;
 }
 #contact .move__text__inner {
+    pointer-events: none;
+    z-index: 1;
 }
 .contact__title {
     font-family: var(--font-eng);
@@ -19,6 +21,7 @@
     text-transform: uppercase;
     white-space: nowrap;
     margin-top: 22vw;
+    pointer-events: none;
 }
 #contact .figure__inner {
 }
@@ -38,54 +41,62 @@
     left: 10vw;
 }
 #contact .hover__txt {
+    width: 12vw;
+    height: 12vw;
+    line-height: 12vw;
     font-family: var(--font-eng);
     font-size: 2vw;
     font-weight: 300;
     text-transform: uppercase;
     color: var(--pc-y);
     position: absolute;
-    top: 12vw;
+    top: 6vw;
     left: 26vw;
     transform: rotateZ(-45deg);
+    transition: all 0.3s;
+}
+#contact .hover__txt:hover {
+    transform: rotateZ(-360deg);
 }
 #contact .figure1 {
     width: 12.5vw;
     height: 12.5vw;
     top: 12vw;
     left: 12vw;
+    z-index: 2;
 }
 #contact .figure2 {
     width: 17.5vw;
     height: 17.5vw;
     top: 25vw;
     left: 16.5vw;
+    z-index: 2;
 }
 #contact .figure3 {
     width: 9vw;
     height: 9vw;
     top: 19vw;
     left: 37vw;
-    z-index: -1;
 }
 #contact .figure4 {
     width: 21vw;
     height: 21vw;
     top: 17.5vw;
     left: 50vw;
-    z-index: -1;
 }
 #contact .figure5 {
     width: 11vw;
     height: 11vw;
     top: 18.5vw;
-    left: 75vw  ;
+    left: 75vw;
+    z-index: 2;
 }
 
 /* contact__address__section */
 .contact__address__section {
     display: flex;
     justify-content: space-between;
-    height: 5vw;
+    margin-bottom: 8vw;
 }
 .contact__tag{
     width: 20%;

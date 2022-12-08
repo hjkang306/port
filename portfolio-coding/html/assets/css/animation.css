@@ -39,3 +39,67 @@
     transform: rotateY(360deg);
   }
 }
+
+/* tada */
+.tada:hover {
+  animation: tada .5s;
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* headShake */
+.headShake:hover {
+  animation: headShake .5s ease-in-out infinite;
+}
+
+@keyframes headShake {
+  0% {
+    transform: translateX(0) rotateZ(45deg);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateZ(45deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateZ(45deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateZ(45deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateZ(45deg);
+  }
+
+  50% {
+    transform: translateX(0) rotateZ(45deg);
+  }
+}

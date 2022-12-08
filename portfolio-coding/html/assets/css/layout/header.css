@@ -135,6 +135,23 @@ details[open] > summary::after {
   margin-top: 0;
 }
 .navigation ul li a {
+  position: relative;
+}
+.navigation ul li a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -0.2vw;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navigation ul li:hover a::after {
+  width: 100%; 
+  left: 0; 
 }
 
 @media (max-width: 1200px){

@@ -87,8 +87,13 @@
 }
 
 /* effect */
-.effect__section {
+.effect__section,
+.effect__section__last {
     position: relative;
+    position: sticky;
+    top: 0;
+    height: 56.25vw;
+    background: var(--black);
 }
 .effect__desc {
     width: 19.5vw;

@@ -20,6 +20,16 @@
   transform: rotate(45deg);
   position: absolute;
 }
+#home .figure.water {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: scale(1.2);
+}
+#home .figure.circle {
+  border-radius: 50%;
+  transform: scale(1.2);
+}
 .star {
   align-items: center;
   font-family: var(--font-eng);

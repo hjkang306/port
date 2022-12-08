@@ -54,12 +54,16 @@ img {
 
 /* cursor */
 .mouse__cursor {
+    display: none;
     width: 5vw;
     height: 5vw;
     border-radius: 50%;
-    background: var(--white);
-    mix-blend-mode: difference;
+    border: 3px solid var(--white);
     position: absolute;
     z-index: 50;
     transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.mouse__cursor.show {
+    display: block;
 }
