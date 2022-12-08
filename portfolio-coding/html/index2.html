@@ -645,38 +645,38 @@
 
     <!-- scroll -->
     <script>
-      const aboutImg = document.querySelectorAll(".about__me01__img");
-      const about = document.querySelector("#about");
-      const aboutMe01 = document.querySelector(".about__me01");
-      let aboutTop = aboutMe01.getBoundingClientRect();
-      console.log(aboutTop)
+    const aboutImg = document.querySelectorAll(".about__me01__img");
+    const about = document.querySelector("#about");
+    const aboutMe01 = document.querySelector(".about__me01");
+    let aboutTop = aboutMe01.getBoundingClientRect();
+    // console.log(aboutTop)
       
 
-      let scrollTop = 0;
-      // 스크롤 값
-      function scroll() {
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
-            requestAnimationFrame(scroll);
+    let scrollTop = 0;
+    // 스크롤 값 + 이미지 바뀌기
+    function scroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+        requestAnimationFrame(scroll);
 
-            if (scrollTop > 2900 && scrollTop < 3500){
-                aboutImg.forEach(e => {
-                    e.classList.remove("show");
-                });
-                aboutImg[1].classList.add("show");
-            } else if (scrollTop >= 3500) {
-                aboutImg.forEach(e => {
-                    e.classList.remove("show");
-                });
-                aboutImg[2].classList.add("show");
-            } else {
-                aboutImg.forEach(e => {
-                    e.classList.remove("show");
-                });
-                aboutImg[0].classList.add("show");
-            }
-      }
-      scroll();
+        if (scrollTop > 2900 && scrollTop < 3500){
+            aboutImg.forEach(e => {
+                e.classList.remove("show");
+            });
+            aboutImg[1].classList.add("show");
+        } else if (scrollTop >= 3500) {
+            aboutImg.forEach(e => {
+                e.classList.remove("show");
+            });
+            aboutImg[2].classList.add("show");
+        } else {
+            aboutImg.forEach(e => {
+                e.classList.remove("show");
+            });
+            aboutImg[0].classList.add("show");
+        }
+    }
+    scroll();
 
     // 스무스
     const fixCheckIn = setInterval(() => {
@@ -698,46 +698,58 @@
         }
     }
 
-      // gsap 가로
-      gsap.registerPlugin(ScrollTrigger);
+    // 피규어 이질감
+    gsap.set("#effect .figure__inner", { yPercent: 10});
 
-      const sections01 = gsap.utils.toArray(".react__section");
-      const sections02 = gsap.utils.toArray(".vue__section");
-      const sections03 = gsap.utils.toArray(".php__section");
+    gsap.to("#effect .figure__inner", {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#effect",
+            scrub: 1
+        }, 
+    });
 
-      gsap.to(sections01, {
-          xPercent: -100 * (sections01.length -1),
-          ease: "none",
-          scrollTrigger: {
-              trigger: ".react__wrap",
-              pin: true,
-              scrub: 1,
-              end: "+=4000",
-              markers: true,
-          }
-      });
-      gsap.to(sections02, {
-          xPercent: -100 * (sections02.length -1),
-          ease: "none",
-          scrollTrigger: {
-              trigger: ".vue__wrap",
-              pin: true,
-              scrub: 1,
-              end: "+=4000",
-              markers: true,
-          }
-      });
-      gsap.to(sections03, {
-          xPercent: -100 * (sections03.length -1),
-          ease: "none",
-          scrollTrigger: {
-              trigger: ".php__wrap",
-              pin: true,
-              scrub: 1,
-              end: "+=4000",
-              markers: true,
-          }
-      });
+    // gsap 가로
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections01 = gsap.utils.toArray(".react__section");
+    const sections02 = gsap.utils.toArray(".vue__section");
+    const sections03 = gsap.utils.toArray(".php__section");
+
+    gsap.to(sections01, {
+        xPercent: -100 * (sections01.length -1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".react__wrap",
+            pin: true,
+            scrub: 1,
+            end: "+=4000",
+            markers: true,
+        }
+    });
+    gsap.to(sections02, {
+        xPercent: -100 * (sections02.length -1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".vue__wrap",
+            pin: true,
+            scrub: 1,
+            end: "+=4000",
+            markers: true,
+        }
+    });
+    gsap.to(sections03, {
+        xPercent: -100 * (sections03.length -1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".php__wrap",
+            pin: true,
+            scrub: 1,
+            end: "+=4000",
+            markers: true,
+        }
+    });
     </script>
 
     <!-- effect -->
