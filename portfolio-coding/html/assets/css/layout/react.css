@@ -46,24 +46,25 @@
     height: 100%;
     border-radius: 50%;
     background-position: center center;
+    background-size: contain;
     position: absolute;
     transform: scale(0);
     transition: all .3s cubic-bezier(0.87,-0.04, 0.45, 1);
 }
 .react__section .figure:hover .figureImg {
-    transform: scale(1);
+    transform: scale(0.9);
 }
 .react__section .figure1 .figureImg {
-    background-image: url(../../img/react01.png);
+    background-image: url(../../img/react01-min.jpg);
 }
 .react__section .figure3 .figureImg {
-    background-image: url(../../img/react02.png);
+    background-image: url(../../img/react02-min.jpg);
 }
 .react__section .figure6 .figureImg {
-    background-image: url(../../img/react03.png);
+    background-image: url(../../img/react03-min.jpg);
 }
 .react__section .figure7 .figureImg {
-    background-image: url(../../img/react04.png);
+    background-image: url(../../img/react04-min.jpg);
 }
 
 .react__section .figure1 {
@@ -113,7 +114,7 @@
     z-index: 1;
 }
 
-.react__section01 img {
+.react__section01 .react__img img {
     width: 1920px;
     object-fit: contain;
     position: absolute;
@@ -122,5 +123,7 @@
     z-index: 1;
 }
 
+
 /* react__section02 */
-.react__section02 {}
+.react__section02 {
+}

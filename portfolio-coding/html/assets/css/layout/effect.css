@@ -81,15 +81,16 @@
 #slider__effect,
 #parallax__effect,
 #game__effect {
-    position: relative;
+    /* position: relative; */
 }
 
 /* effect */
-.effect__section,
-.effect__section__last {
-    position: relative;
+.effect__section {
+    /* position: relative; */
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 56.25vw;
     background: var(--black);
 }

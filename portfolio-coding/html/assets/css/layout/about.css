@@ -94,7 +94,7 @@
 }
 .point__color {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0.2vw 0.3vw 0.05vw;
     line-height: 1.2;
     background-color: var(--pc-y);
 }

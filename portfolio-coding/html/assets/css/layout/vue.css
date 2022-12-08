@@ -46,25 +46,25 @@
     height: 100%;
     border-radius: 50%;
     background-position: center center;
+    background-size: contain;
     position: absolute;
     transform: scale(0);
     transition: all .3s cubic-bezier(0.87,-0.04, 0.45, 1);
 }
 .vue__section .figure:hover .figureImg {
-    transform: scale(1);
+    transform: scale(0.9);
 }
 .vue__section .figure1 .figureImg {
-    background-image: url(../../img/vue01.png);
+    background-image: url(../../img/vue01-min.jpg);
 }
 .vue__section .figure3 .figureImg {
-    background-image: url(../../img/vue02.png);
+    background-image: url(../../img/vue02-min.jpg);
 }
 .vue__section .figure6 .figureImg {
-    background-image: url(../../img/vue03.png);
+    background-image: url(../../img/vue03-min.jpg);
 }
 .vue__section .figure7 .figureImg {
-    background-position: top center;
-    background-image: url(../../img/vue04.png);
+    background-image: url(../../img/vue04-min.jpg);
 }
 .vue__section .figure1 {
     width: 740px;

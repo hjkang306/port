@@ -26,7 +26,7 @@
     <div class="notice">
         <h3 class="notice__tit">check point !</h3>
         <p class="notice__txt">
-            이 페이지는 <span class="point__color">드래그 앤 드롭</span> 기능이 곳곳에 들어있습니다.
+            안녕하세요, 반갑습니다! 이 페이지는 <span class="point__color">드래그 앤 드롭</span> 기능이 곳곳에 들어있습니다.
             재미있는 요소도 많이 숨겨 두었으니, 하나씩 찾아보며 즐겨주세요!
         </p>
         <button class="notice__close" type="button">확인!</button>
@@ -383,7 +383,7 @@
         </div>
         <!-- parallax__effect -->
 
-        <div id="game__effect" class="effect__section__last section container">
+        <div id="game__effect" class="effect__section section container">
             <p class="effect__desc">
                 공부한 자바스크립트 지식을 총 출동하여 테트리스, 카드 뒤집기, 용어 맞추기 등의 간단한 게임 효과를 만들어 보았습니다.
             </p>
@@ -453,9 +453,9 @@
                             <div class="figureImg"></div>
                         </div>
                     </div>
-                    <a href="https://react-api-333.netlify.app/" target="_blank">
+                    <div class="react__img">
                         <img src="assets/img/reactApi.png" alt="리액트 목업 이미지">
-                    </a>
+                    </div>
                 </div>
                 <div class="react__section react__section02">
                 </div>
@@ -609,16 +609,20 @@
         const notice = document.querySelector(".notice");
         const noticeClose = document.querySelector(".notice__close");
 
-        onload = (event) => {
-            setTimeout(()=>{
-                notice.classList.add("show");
-            }, 2500)
-        }
-
         noticeClose.addEventListener("click", () => {
             notice.classList.remove("show");
             document.body.classList.remove("fixed")
         })
+
+        // 새로고침하면 스크롤 맨 위로
+        window.onload = function(){
+            setTimeout(function(){
+                scrollTo(0,0);
+            }, 100);
+            setTimeout(()=>{
+                notice.classList.add("show");
+            }, 2500);
+        }
     </script>
 
     <!-- cursor -->
@@ -645,6 +649,8 @@
 
     <!-- scroll -->
     <script>
+    gsap.registerPlugin(ScrollTrigger);
+
     const aboutImg = document.querySelectorAll(".about__me01__img");
     const about = document.querySelector("#about");
     const aboutMe01 = document.querySelector(".about__me01");
@@ -699,20 +705,95 @@
     }
 
     // 피규어 이질감
-    gsap.set("#effect .figure__inner", { yPercent: 10});
+    gsap.set("#effect .figure1", { yPercent: 50});
+    gsap.set("#effect .figure3", { yPercent: 50});
+    gsap.set("#effect .figure5", { yPercent: 50});
+    gsap.set("#effect .figure7", { yPercent: 50});
 
-    gsap.to("#effect .figure__inner", {
-        yPercent: -10,
-        ease: "none",
+    gsap.to("#effect .figure1", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#effect",
+            scrub: 1
+        }, 
+    });
+    gsap.to("#effect .figure3", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#effect",
+            scrub: 1
+        }, 
+    });
+    gsap.to("#effect .figure5", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#effect",
+            scrub: 1
+        }, 
+    });
+    gsap.to("#effect .figure7", {
+        yPercent: -70,
+        ease: "power4",
         scrollTrigger: {
             trigger: "#effect",
             scrub: 1
         }, 
     });
 
-    // gsap 가로
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.set("#about .figure1", { yPercent: 50});
+    gsap.set("#about .figure3", { yPercent: 50});
+    gsap.set("#about .figure5", { yPercent: 50});
+    gsap.set("#about .figure7", { yPercent: 50});
 
+    gsap.to("#about .figure1", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#about",
+            scrub: 1
+        }, 
+    });
+    gsap.to("#about .figure3", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#about",
+            scrub: 1
+        }, 
+    });
+    gsap.to("#about .figure5", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#about",
+            scrub: 1
+        }, 
+    });
+    gsap.to("#about .figure7", {
+        yPercent: -70,
+        ease: "power4",
+        scrollTrigger: {
+            trigger: "#about",
+            scrub: 1
+        }, 
+    });
+
+    // 명언
+    gsap.set(".about__me02__text__desc", { opacity: 0, yPercent: 100});
+    gsap.to(".about__me02__text__desc", {
+        opacity: 1,
+        yPercent: 0,
+        ease: "power4.easeInOut",
+        scrollTrigger: {
+            trigger: ".about__me02__text",
+            scrub: 1,
+        }
+    });
+
+    // gsap 가로
     const sections01 = gsap.utils.toArray(".react__section");
     const sections02 = gsap.utils.toArray(".vue__section");
     const sections03 = gsap.utils.toArray(".php__section");
@@ -752,8 +833,8 @@
     });
     </script>
 
-    <!-- effect -->
-    <script>
+    <!-- effect gsap -->
+    <!-- <script>
         gsap.utils.toArray(".effect__section").forEach((panel, i) => {
             ScrollTrigger.create({
                 trigger: panel,
@@ -762,7 +843,7 @@
                 pinSpacing: false 
             });
         });
-    </script>
+    </script> -->
 
     <!-- 모양 -->
     <script>
