@@ -26,8 +26,6 @@ details > summary::after {
     float: right;
     margin-top: 0.2vw;
 }
-/* .color__menu > summary::after {margin-left: 3vw;}
-.navigation > summary::after {margin-left: 1.5vw;} */
 details[open] > summary::after {
   content: '-';
   font-size: 1.3vw;
@@ -150,6 +148,10 @@ details[open] > summary::after {
   width: 0;
 }
 .navigation ul li:hover a::after {
+  width: 100%; 
+  left: 0; 
+}
+.navigation ul li.active a::after {
   width: 100%; 
   left: 0; 
 }

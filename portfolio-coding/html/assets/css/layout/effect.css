@@ -75,24 +75,22 @@
 }
 
 /* effect */
-#search__effect,
-#quiz__effect,
-#mouse__effect,
-#slider__effect,
-#parallax__effect,
-#game__effect {
-    /* position: relative; */
-}
+#search__effect {}
+#quiz__effect { top: 0.4vw; background: #242424;}
+#mouse__effect {top: 0.8vw; background: #2e2e2e;}
+#slider__effect {top: 1.2vw; background: #3d3d3d;}
+#parallax__effect {top: 1.6vw; background: #494949;}
+#game__effect {top: 2vw; background-image: linear-gradient(#494949, #1f1f1f);}
 
 /* effect */
 .effect__section {
-    /* position: relative; */
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     height: 56.25vw;
     background: var(--black);
+    padding: 0 10vw;
 }
 .effect__desc {
     width: 19.5vw;
@@ -138,7 +136,7 @@
     width: 8vw;
     transform: rotateZ(-13deg);
     position: absolute;
-    right: 15vw;
+    right: 25vw;
     transition: transform .5s;
 }
 .effect__deco01 svg {
@@ -158,7 +156,7 @@
     transform: rotateZ(-25deg);
     position: absolute;
     top: 3vw;
-    right: 4vw;
+    right: 14vw;
     z-index: 1;
     transition: transform .5s;
 }
@@ -173,11 +171,12 @@
     line-height: 3.5vw;
 }
 
+/* effect img wrap */
 .effect__img__wrap {
-    width: 65%;
+    width: 50%;
     position: absolute;
     top: 10vw;
-    right: 0;
+    right: 10vw;
     border: 3px solid var(--white);
 }
 .effect__img__tit {
@@ -194,7 +193,35 @@
     font-size: 1.2vw;
     margin-top: 0.3vw;
 }
-.effect__img__wrap img {}
+.effect__img__wrap a {
+    position: relative;
+}
+.effect__img__wrap a img {}
+.effect__img__wrap a .effect__btn {
+    opacity: 0;
+    pointer-events: none;
+    color: var(--white);
+    width: 5vw;
+    height: 5vw;
+    font-family: var(--font-en);
+    font-weight: 500;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 5vw;
+    border-radius: 50%;
+    border: 2px dashed var(--white);
+    position: absolute;
+    top: 21vw;
+    right: 3vw;
+    transition: opacity 0.3s, transform 100s ease;
+    transform: rotateZ(0);
+    mix-blend-mode: difference;
+}
+.effect__img__wrap:hover a .effect__btn {
+    opacity: 1;
+    transform: rotateZ(3600deg);
+}
 
 @media (max-width: 970px){
     .effect__desc {

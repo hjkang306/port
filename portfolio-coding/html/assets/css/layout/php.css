@@ -39,8 +39,62 @@
     border-radius: 50%;
     background-color: var(--pc-y);
     position: absolute;
-    overflow: hidden;
 }
+
+/* btn */
+.php__section .figure a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2vw;
+}
+.php__section .figure:hover a {
+    color: var(--white);
+    transform: scale(1);
+}
+.php__section .figure a {
+    font-family: var(--font-en);
+    font-weight: 700;
+    width: 15vw;
+    height: 15vw;
+    max-width: 150px;
+    max-height: 150px;
+    font-size: 1vw;
+    color: transparent;
+    text-transform: uppercase;
+    background-color: inherit;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 7.5vw;
+    position: absolute;
+    transform: scale(0);
+}
+.php__section .figure .page__btn {
+    transition: all 0.3s cubic-bezier(0.87,-0.04, 0.45, 1);
+}
+.php__section .figure .source__btn {
+    transition: all 0.2s cubic-bezier(0.87,-0.04, 0.45, 1);
+}
+/* figure1 */
+.php__section .figure1 .page__btn {transform: translate(100%, 100%);}
+.php__section .figure1:hover .page__btn {transform: translate(-30%, 30%);}
+.php__section .figure1 .source__btn {transform: translate(100%, 130%);}
+.php__section .figure1:hover .source__btn {transform: translate(-70%, 130%);}
+/* figure3 */
+.php__section .figure3 .page__btn {transform: translate(100%, 300%);}
+.php__section .figure3:hover .page__btn {transform: translate(-20%, 400%);}
+.php__section .figure3 .source__btn {transform: translate(100%, 200%);}
+.php__section .figure3:hover .source__btn {transform: translate(-70%, 310%);}
+/* figure6 */
+.php__section .figure6 .page__btn {transform: translate(100%, 100%);}
+.php__section .figure6:hover .page__btn {transform: translate(-10%, 40%);}
+.php__section .figure6 .source__btn {transform: translate(100%, 130%);}
+.php__section .figure6:hover .source__btn {transform: translate(-60%, 130%);}
+/* figure7 */
+.php__section .figure7 .page__btn {transform: translate(250%, 100%);}
+.php__section .figure7:hover .page__btn {transform: translate(320%, 0%);}
+.php__section .figure7 .source__btn {transform: translate(250%, 130%);}
+.php__section .figure7:hover .source__btn {transform: translate(370%, 100%);}
+
+/* img */
 .php__section .figure .figureImg {
     width: 100%;
     height: 100%;
@@ -113,13 +167,54 @@
     z-index: 1;
 }
 
-.php__section01 img {
-    width: 1920px;
-    object-fit: contain;
+/* img */
+.php__img__inner {
+    width: 100vw;
+    font-family: var(--font-ko1);
     position: absolute;
     top: 0;
     left: 6649px;
     z-index: 1;
+}
+.php__desc {
+    opacity: 0;
+    margin: 0 auto;
+    width: 48%;
+    word-break: keep-all;
+    margin-top: 6.6vw;
+    padding: 10vw 8vw 7.5vw;
+    transform: translateX(3.2%);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.829);
+    transition: all 0.3s;
+}
+.php__desc:hover {
+    opacity: 1;
+}
+.php__txt {
+    font-size: 1.5vw;
+    line-height: 1.4;
+    margin-bottom: 2vw;
+}
+.php__desc a {
+    display: block;
+    text-align: right;
+    font-size: 1vw;
+    color: var(--white);
+}
+.php__desc a:last-child {
+    margin-top: 0.5vw;
+}
+.php__desc a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3vw;
+}
+.php__img__inner img {
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 /* php__section02 */

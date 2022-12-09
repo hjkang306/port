@@ -39,8 +39,61 @@
     border-radius: 50%;
     background-color: var(--pc-y);
     position: absolute;
-    overflow: hidden;
 }
+/* btn */
+.vue__section .figure a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2vw;
+}
+.vue__section .figure:hover a {
+    color: var(--white);
+    transform: scale(1);
+}
+.vue__section .figure a {
+    font-family: var(--font-en);
+    font-weight: 700;
+    width: 15vw;
+    height: 15vw;
+    max-width: 150px;
+    max-height: 150px;
+    font-size: 1vw;
+    color: transparent;
+    text-transform: uppercase;
+    background-color: inherit;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 7.5vw;
+    position: absolute;
+    transform: scale(0);
+}
+.vue__section .figure .page__btn {
+    transition: all 0.3s cubic-bezier(0.87,-0.04, 0.45, 1);
+}
+.vue__section .figure .source__btn {
+    transition: all 0.2s cubic-bezier(0.87,-0.04, 0.45, 1);
+}
+/* figure1 */
+.vue__section .figure1 .page__btn {transform: translate(100%, 100%);}
+.vue__section .figure1:hover .page__btn {transform: translate(-30%, 30%);}
+.vue__section .figure1 .source__btn {transform: translate(100%, 130%);}
+.vue__section .figure1:hover .source__btn {transform: translate(-70%, 130%);}
+/* figure3 */
+.vue__section .figure3 .page__btn {transform: translate(100%, 300%);}
+.vue__section .figure3:hover .page__btn {transform: translate(-20%, 400%);}
+.vue__section .figure3 .source__btn {transform: translate(100%, 200%);}
+.vue__section .figure3:hover .source__btn {transform: translate(-70%, 310%);}
+/* figure6 */
+.vue__section .figure6 .page__btn {transform: translate(100%, 100%);}
+.vue__section .figure6:hover .page__btn {transform: translate(-10%, 40%);}
+.vue__section .figure6 .source__btn {transform: translate(100%, 130%);}
+.vue__section .figure6:hover .source__btn {transform: translate(-60%, 130%);}
+/* figure7 */
+.vue__section .figure7 .page__btn {transform: translate(250%, 100%);}
+.vue__section .figure7:hover .page__btn {transform: translate(320%, 0%);}
+.vue__section .figure7 .source__btn {transform: translate(250%, 130%);}
+.vue__section .figure7:hover .source__btn {transform: translate(370%, 100%);}
+
+/* img */
 .vue__section .figure .figureImg {
     width: 100%;
     height: 100%;
@@ -113,13 +166,54 @@
     z-index: 1;
 }
 
-.vue__section01 img {
-    width: 1920px;
-    object-fit: contain;
+/* img */
+.vue__img__inner {
+    width: 100vw;
+    font-family: var(--font-ko1);
     position: absolute;
     top: 0;
     left: 6649px;
     z-index: 1;
+}
+.vue__desc {
+    opacity: 0;
+    margin: 0 auto;
+    width: 48%;
+    word-break: keep-all;
+    margin-top: 6.6vw;
+    padding: 10vw 8vw 8vw;
+    transform: translateX(3.2%);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.829);
+    transition: all 0.3s;
+}
+.vue__desc:hover {
+    opacity: 1;
+}
+.vue__txt {
+    font-size: 2vw;
+    line-height: 1.4;
+    margin-bottom: 2vw;
+}
+.vue__desc a {
+    display: block;
+    text-align: right;
+    font-size: 1vw;
+    color: var(--white);
+}
+.vue__desc a:last-child {
+    margin-top: 0.5vw;
+}
+.vue__desc a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3vw;
+}
+.vue__img__inner img {
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 /* vue__section02 */
