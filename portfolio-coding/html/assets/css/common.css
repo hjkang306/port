@@ -67,3 +67,11 @@ img {
 .mouse__cursor.show {
     display: block;
 }
+
+/* horizon */
+.horizon {
+    display: none;
+}
+.horizon.show {
+    display: block;
+}

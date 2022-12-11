@@ -20,10 +20,13 @@
     width: 200%;
     margin-top: 250px;
     z-index: 1;
+    pointer-events: none;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
 }
 .react__section__tit {
     font-family: var(--font-eng);
-    font-size: 800px;
+    font-size: 42vw;
     font-weight: 400;
     letter-spacing: -0.05em;
 }
@@ -53,17 +56,17 @@
 .react__section .figure a {
     font-family: var(--font-en);
     font-weight: 700;
-    width: 15vw;
-    height: 15vw;
-    max-width: 150px;
-    max-height: 150px;
-    font-size: 1vw;
+    width: 150px;
+    height: 150px;
+    /* max-width: 150px;
+    max-height: 150px; */
+    font-size: 1.4vw;
+    text-align: center;
+    line-height: 150px;
     color: transparent;
     text-transform: uppercase;
     background-color: inherit;
     border-radius: 50%;
-    text-align: center;
-    line-height: 7.5vw;
     position: absolute;
     transform: scale(0);
 }
@@ -128,46 +131,46 @@
     width: 740px;
     height: 740px;
     top: 56px;
-    left: 513px;
+    left: 20vw;
 }
 .react__section .figure2 {
     width: 516px;
     height: 516px;
     top: 394px;
-    left: 1441px;
+    left: 75vw;
     z-index: 1;
 }
 .react__section .figure3 {
     width: 817px;
     height: 817px;
     top: -126px;
-    left: 2268px;
+    left: 120vw;
     z-index: 1;
 }
 .react__section .figure4 {
     width: 530px;
     height: 530px;
     top: 718px;
-    left: 3044px;
+    left: 160vw;
 }
 .react__section .figure5 {
     width: 390px;
     height: 390px;
     top: 404px;
-    left: 3559px;
+    left: 185vw;
 }
 .react__section .figure6 {
     width: 915px;
     height: 915px;
     top: 56px;
-    left: 4528px;
+    left: 240vw;
     z-index: 1;
 }
 .react__section .figure7 {
     width: 583px;
     height: 583px;
     top: 477px;
-    left: 5588px;
+    left: 290vw;
     z-index: 1;
 }
 
@@ -176,8 +179,8 @@
     width: 100vw;
     font-family: var(--font-ko1);
     position: absolute;
-    top: 0;
-    left: 6649px;
+    bottom: 20vw;
+    left: 350vw;
     z-index: 1;
 }
 .react__desc {
@@ -215,7 +218,7 @@
 }
 .react__img__inner img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
     top: 0;
     z-index: -1;

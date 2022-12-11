@@ -20,6 +20,8 @@
     margin-top: 250px;
     z-index: 1;
     pointer-events: none;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
 }
 .php__section__tit {
     font-family: var(--font-eng);
@@ -53,17 +55,17 @@
 .php__section .figure a {
     font-family: var(--font-en);
     font-weight: 700;
-    width: 15vw;
-    height: 15vw;
-    max-width: 150px;
-    max-height: 150px;
-    font-size: 1vw;
+    width: 150px;
+    height: 150px;
+    /* max-width: 150px;
+    max-height: 150px; */
+    font-size: 1.4vw;
+    text-align: center;
+    line-height: 150px;
     color: transparent;
     text-transform: uppercase;
     background-color: inherit;
     border-radius: 50%;
-    text-align: center;
-    line-height: 7.5vw;
     position: absolute;
     transform: scale(0);
 }
@@ -124,46 +126,46 @@
     width: 740px;
     height: 740px;
     top: 56px;
-    left: 513px;
+    left: 20vw;
 }
 .php__section .figure2 {
     width: 516px;
     height: 516px;
     top: 394px;
-    left: 1441px;
+    left: 75vw;
     z-index: 1;
 }
 .php__section .figure3 {
     width: 817px;
     height: 817px;
     top: -126px;
-    left: 2268px;
+    left: 120vw;
     z-index: 1;
 }
 .php__section .figure4 {
     width: 530px;
     height: 530px;
     top: 718px;
-    left: 3044px;
+    left: 160vw;
 }
 .php__section .figure5 {
     width: 390px;
     height: 390px;
     top: 404px;
-    left: 3559px;
+    left: 185vw;
 }
 .php__section .figure6 {
     width: 915px;
     height: 915px;
     top: 56px;
-    left: 4528px;
+    left: 240vw;
     z-index: 1;
 }
 .php__section .figure7 {
     width: 583px;
     height: 583px;
     top: 477px;
-    left: 5588px;
+    left: 290vw;
     z-index: 1;
 }
 
@@ -172,8 +174,8 @@
     width: 100vw;
     font-family: var(--font-ko1);
     position: absolute;
-    top: 0;
-    left: 6649px;
+    bottom: 14vw;
+    left: 350vw;
     z-index: 1;
 }
 .php__desc {
@@ -182,7 +184,7 @@
     width: 48%;
     word-break: keep-all;
     margin-top: 6.6vw;
-    padding: 10vw 8vw 7.5vw;
+    padding: 7vw 8vw 5.5vw;
     transform: translateX(3.2%);
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.829);
@@ -192,7 +194,7 @@
     opacity: 1;
 }
 .php__txt {
-    font-size: 1.5vw;
+    font-size: 2vw;
     line-height: 1.4;
     margin-bottom: 2vw;
 }

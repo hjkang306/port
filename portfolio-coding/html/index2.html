@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="index2.css"> -->
   </head>
-  <body id="index2" class="fixed">
+  <body id="index2">
+    <!-- class="fixed" -->
     <div id="skip">
       <a href="#home">home 바로 가기</a>
       <a href="#about">about 바로 가기</a>
       <a href="#effect">effect 영역 바로 가기</a>
-      <a href="#react">react 영역 바로 가기</a>
-      <a href="#vue">vue 영역 바로 가기</a>
-      <a href="#php">php 영역 바로 가기</a>
+      <a href="#react" class="reactNav">react 영역 바로 가기</a>
+      <a href="#vue" class="vueNav">vue 영역 바로 가기</a>
+      <a href="#php" class="phpNav">php 영역 바로 가기</a>
       <a href="#contact">contact 바로 가기</a>
     </div>
     <!-- //skip -->
@@ -65,9 +66,9 @@
                 <li class="active"><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#effect">effect</a></li>
-                <li><a href="#react">react site</a></li>
-                <li><a href="#vue">vue site</a></li>
-                <li><a href="#php">php site</a></li>
+                <li><a href="#react" class="reactNav">react site</a></li>
+                <li><a href="#vue" class="vueNav">vue site</a></li>
+                <li><a href="#php" class="phpNav">php site</a></li>
                 <li><a href="#contact">contact</a></li>
               </ul>
             </details>
@@ -78,27 +79,29 @@
     <!-- header -->
 
     <main id="main">
-      <section id="home">
+      <section id="home" class="show">
         <div class="move__text__inner">
           <h2 class="main__title animation01">journey • to • be • front-end • developer •&nbsp;</h2>
           <h2 class="main__title animation01">journey • to • be • front-end • developer •&nbsp;</h2>
         </div>
         <div class="figure__inner">
-          <div class="star rotateY">*</div>
-          <div class="hover__txt">hover me !</div>
-          <div class="figure figure1">
-            <div class="sunglass"></div>
-            <img src="assets/img/kang01.png" alt="이미지" />
-          </div>
-          <div class="figure figure2"></div>
-          <div class="figure figure3"></div>
-          <div class="figure figure4"></div>
-          <div class="figure figure5"></div>
+            <div class="homeDecoInner">
+                <div class="star rotateY">*</div>
+                <div class="hover__txt">hover me !</div>
+            </div>
+            <div class="figure figure1">
+                <div class="sunglass"></div>
+                <img src="assets/img/kang01.png" alt="이미지" />
+            </div>
+            <div class="figure figure2"></div>
+            <div class="figure figure3"></div>
+            <div class="figure figure4"></div>
+            <div class="figure figure5"></div>
         </div>
       </section>
       <!-- home -->
 
-      <section id="about">
+      <section id="about" class="show">
         <div class="about__title__section">
           <div class="move__text__inner">
             <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
@@ -169,7 +172,7 @@
       </section>
       <!-- about -->
 
-      <section id="effect">
+      <section id="effect" class="show">
         <article class="effect__title__section">
             <div class="move__text__inner">
                 <h3 class="effect__title animation01">javascript • Effect • javascript • Effect •&nbsp;</h3>
@@ -431,7 +434,7 @@
       <!-- effect -->
 
       <!-- site -->
-      <section id="react">
+      <section id="react" class="horizon show">
         <div class="react__wrap">
             <div class="react__section__inner">
                 <div class="react__section react__section01">
@@ -482,9 +485,54 @@
             </div>
         </div>
       </section>
+      <section id="react2" class="vertical">
+        <div class="vertical__wrap">
+            <div class="vertical__section__inner">
+                <h3 class="vertical__tit">
+                    REACT SITE & API
+                </h3>
+                <div class="vertical__section">
+                    <div class="vertical__figure__inner">
+                        <div class="figure figure1">
+                            <div class="figureImg"></div>
+                            <a href="https://react-api-333.netlify.app/movie" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/react_api" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure2">
+                            <div class="figureImg"></div>
+                            <a href="https://react-api-333.netlify.app/unsplash" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/react_api" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure3">
+                            <div class="figureImg"></div>
+                            <a href="https://react-api-333.netlify.app/youtube" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/react_api" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure4">
+                            <div class="figureImg"></div>
+                            <a href="https://react-api-333.netlify.app/about" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/react_api" class="source__btn">source</a>
+                        </div>
+                    </div>
+                    <div class="vertical__img__inner">
+                        <div class="vertical__desc">
+                            <p class="vertical__txt">
+                                웹 표준을 준수한 
+                                간단한 REACT 사이트를
+                                만들어 보았습니다.
+                            </p>
+                            <a href="https://react-site-333.netlify.app/" target="_blank">사이트 바로가기 →</a>
+                            <a href="https://github.com/hjkang306/react01" target="_blank">소스 보기 →</a>
+                        </div>
+                        <img src="assets/img/reactApi.png" alt="리액트 목업 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
       <!-- react -->
 
-      <section id="vue">
+      <section id="vue" class="horizon show">
         <div class="vue__wrap">
             <div class="vue__section__inner">
                 <div class="vue__section vue__section01">
@@ -537,9 +585,56 @@
             </div>
         </div>
       </section>
+      <section id="vue2" class="vertical">
+        <div class="vertical__wrap">
+            <div class="vertical__section__inner">
+                <h3 class="vertical__tit">
+                    VUE SITE & API
+                </h3>
+                <div class="vertical__section">
+                    <div class="vertical__figure__inner">
+                        <div class="figure figure1">
+                            <div class="figureImg"></div>
+                            <a href="https://vue-api333.web.app/movie" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/vueclass/tree/main/vue_api" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure2">
+                            <div class="figureImg"></div>
+                            <a href="https://vue-api333.web.app/unsplash" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/vueclass/tree/main/vue_api" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure3">
+                            <div class="figureImg"></div>
+                            <a href="https://vue-api333.web.app/youtube" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/vueclass/tree/main/vue_api" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure4">
+                            <div class="figureImg"></div>
+                            <a href="https://vue-api333.web.app/about" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/vueclass/tree/main/vue_api" class="source__btn">source</a>
+                        </div>
+                    </div>
+                    <a href="https://vue-api333.web.app/" target="_blank">
+                    </a>
+                    <div class="vertical__img__inner">
+                        <div class="vertical__desc">
+                            <p class="vertical__txt">
+                                웹 표준을 준수한 
+                                간단한 VUE 사이트를
+                                만들어 보았습니다.
+                            </p>
+                            <a href="https://vueclass333.web.app/" target="_blank">사이트 바로가기 →</a>
+                            <a href="https://github.com/hjkang306/vueclass/tree/main/vue01" target="_blank">소스 보기 →</a>
+                        </div>
+                        <img src="assets/img/vueApi.png" alt="뷰 목업 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
       <!-- vue -->
 
-      <section id="php">
+      <section id="php" class="horizon show">
         <div class="php__wrap">
             <div class="php__section__inner">
                 <div class="php__section php__section01">
@@ -588,6 +683,49 @@
             </div>
         </div>
       </section>
+      <section id="php2" class="vertical">
+        <div class="vertical__wrap">
+            <div class="vertical__section__inner">
+                <h3 class="vertical__tit">
+                    PHP SITE
+                </h3>
+                <div class="vertical__section">
+                    <div class="vertical__figure__inner">
+                        <div class="figure figure1">
+                            <div class="figureImg"></div>
+                            <a href="http://hjkang306.dothome.co.kr/backup/project/php/category/category_R.php" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/codingclass/tree/main/backup/Project/php/category" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure2">
+                            <div class="figureImg"></div>
+                            <a href="http://hjkang306.dothome.co.kr/backup/project/php/category/small_cg_detail.php?categoryBig=%EC%B7%A8%EB%AF%B8&categorySmall=%EB%93%B1%EC%82%B0&myTipsID=102" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/codingclass/blob/main/backup/Project/php/category/small_cg_detail.php" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure3">
+                            <div class="figureImg"></div>
+                            <a href="http://hjkang306.dothome.co.kr/backup/project/php/Notice/QnACate.php?category=%EC%A0%84%EC%9E%90%EA%B8%B0%EA%B8%B0" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/codingclass/tree/main/backup/Project/php/Notice" class="source__btn">source</a>
+                        </div>
+                        <div class="figure figure4">
+                            <div class="figureImg"></div>
+                            <a href="http://hjkang306.dothome.co.kr/backup/project/php/login/joinAgree.php" class="page__btn">page</a>
+                            <a href="https://github.com/hjkang306/codingclass/tree/main/backup/Project/php/login" class="source__btn">source</a>
+                        </div>
+                    </div>
+                    <div class="vertical__img__inner">
+                        <div class="vertical__desc">
+                            <p class="vertical__txt">
+                                PHP를 이용하여 궁금한 것을 물어보고, 소소하고 유용한 일상의 정보를 얻을 수 있는 웹 페이지를 만들었습니다.
+                            </p>
+                            <a href="http://hjkang306.dothome.co.kr/backup/project/php/main/main.php" target="_blank">사이트 바로가기 →</a>
+                            <a href="https://github.com/hjkang306/codingclass/tree/main/backup/Project/php/" target="_blank">소스 보기 →</a>
+                        </div>
+                        <img src="assets/img/phpProject.png" alt="PHP 목업 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
       <!-- php -->
 
       <section id="contact">
@@ -597,18 +735,20 @@
                 <h3 class="contact__title animation01">CONTACT • CONTACT •&nbsp;</h3>
               </div>
               <div class="figure__inner">
-                  <div class="star rotateY">*</div>
-                  <div class="hover__txt">thank you !</div>
-                  <div class="figure figure1 headShake"></div>
-                  <div class="figure figure2 headShake"></div>
-                  <div class="figure figure3 headShake"></div>
-                  <div class="figure figure4 headShake"></div>
-                  <div class="figure figure5 headShake"></div>
+                    <div class="contactDecoInner">
+                        <div class="star rotateY">*</div>
+                        <div class="hover__txt">thank you !</div>
+                    </div>
+                    <div class="figure figure1 headShake"></div>
+                    <div class="figure figure2 headShake"></div>
+                    <div class="figure figure3 headShake"></div>
+                    <div class="figure figure4 headShake"></div>
+                    <div class="figure figure5 headShake"></div>
               </div>
           </div>
       </section>
 
-      <footer id="footer">
+      <footer id="footer" class="show">
         <div class="contact__address__section container">
             <div class="contact__tag tada">
                 <svg
@@ -657,6 +797,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollToPlugin3.min.js"></script>
     <script src="assets/js/color.js"></script>
+    <script src="assets/js/scroll.js"></script>
     <script>
       $(".drag").draggable({ opacity: 0.8 });
     </script>
@@ -673,6 +814,10 @@
 
         // 새로고침하면 스크롤 맨 위로
         window.onload = function(){
+            sectionHide();
+            sections = document.querySelectorAll("section.show");
+            sectionCheck();
+            verticalGsap();
             setTimeout(function(){
                 scrollTo(0,0);
             }, 100);
@@ -680,208 +825,6 @@
                 notice.classList.add("show");
             }, 500);
         }
-    </script>
-
-    <!-- scroll -->
-    <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    const aboutImg = document.querySelectorAll(".about__me01__img");
-    const about = document.querySelector("#about");
-    const aboutMe01 = document.querySelector(".about__me01");
-    let aboutTop = aboutMe01.getBoundingClientRect();
-    // console.log(aboutTop)
-      
-
-    let scrollTop = 0;
-    // 스크롤 값 + 이미지 바뀌기
-    function scroll() {
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
-        requestAnimationFrame(scroll);
-
-        if (scrollTop > 2900 && scrollTop < 3500){
-            aboutImg.forEach(e => {
-                e.classList.remove("show");
-            });
-            aboutImg[1].classList.add("show");
-        } else if (scrollTop >= 3500) {
-            aboutImg.forEach(e => {
-                e.classList.remove("show");
-            });
-            aboutImg[2].classList.add("show");
-        } else {
-            aboutImg.forEach(e => {
-                e.classList.remove("show");
-            });
-            aboutImg[0].classList.add("show");
-        }
-    }
-    scroll();
-
-    // 스무스
-    const fixCheckIn = setInterval(() => {
-        fixCheck()
-    }, 1000);
-    function fixCheck(){
-        if($("body").hasClass("fixed") === false) {
-            clearInterval(fixCheckIn);
-            const lenis = new Lenis({
-                duration: 1.2,
-                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                smooth: true,
-            });
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
-        }
-    }
-    // 홈
-
-    const homeFig = gsap.utils.toArray("#home .figure");
-    gsap.set(homeFig, { rotation: 520});
-
-    gsap.to(homeFig, {
-        rotation: 360,
-        scrollTrigger: {
-            trigger: "#home",
-            scrub: true,
-            markers: true,
-        }, 
-    });
-
-    // 피규어 이질감
-    gsap.set("#effect .figure1", { yPercent: 50});
-    gsap.set("#effect .figure3", { yPercent: 50});
-    gsap.set("#effect .figure5", { yPercent: 50});
-    gsap.set("#effect .figure7", { yPercent: 50});
-
-    gsap.to("#effect .figure1", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#effect",
-            scrub: 1
-        }, 
-    });
-    gsap.to("#effect .figure3", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#effect",
-            scrub: 1
-        }, 
-    });
-    gsap.to("#effect .figure5", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#effect",
-            scrub: 1
-        }, 
-    });
-    gsap.to("#effect .figure7", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#effect",
-            scrub: 1
-        }, 
-    });
-
-    gsap.set("#about .figure1", { yPercent: 50});
-    gsap.set("#about .figure3", { yPercent: 50});
-    gsap.set("#about .figure5", { yPercent: 50});
-    gsap.set("#about .figure7", { yPercent: 50});
-
-    gsap.to("#about .figure1", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#about",
-            scrub: 1
-        }, 
-    });
-    gsap.to("#about .figure3", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#about",
-            scrub: 1
-        }, 
-    });
-    gsap.to("#about .figure5", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#about",
-            scrub: 1
-        }, 
-    });
-    gsap.to("#about .figure7", {
-        yPercent: -70,
-        ease: "power4",
-        scrollTrigger: {
-            trigger: "#about",
-            scrub: 1
-        }, 
-    });
-
-    // 명언
-    gsap.set(".about__me02__text__desc", { opacity: 0, yPercent: 100});
-    gsap.to(".about__me02__text__desc", {
-        opacity: 1,
-        yPercent: 0,
-        ease: "power4.easeInOut",
-        scrollTrigger: {
-            trigger: ".about__me02__text",
-            scrub: 1,
-        }
-    });
-
-    // gsap 가로
-    const sections01 = gsap.utils.toArray(".react__section");
-    const sections02 = gsap.utils.toArray(".vue__section");
-    const sections03 = gsap.utils.toArray(".php__section");
-    const react01 = document.querySelector(".react__section01");
-    const vue01 = document.querySelector(".vue__section01");
-    const php01 = document.querySelector(".php__section01");
-    
-    gsap.to(sections01, {
-        xPercent: -100 * (sections01.length -1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".react__wrap",
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + react01.offsetWidth,
-            // markers: true,
-        }
-    });
-    gsap.to(sections02, {
-        xPercent: -100 * (sections02.length -1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".vue__wrap",
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + vue01.offsetWidth,
-            // markers: true,
-        }
-    });
-    gsap.to(sections03, {
-        xPercent: -100 * (sections03.length -1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".php__wrap",
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + php01.offsetWidth,
-            // markers: true,
-        }
-    });
     </script>
 
     <!-- 모양 -->
@@ -902,11 +845,15 @@
 
     <!-- 네비게이션 -->
     <script>
-        const sections = document.querySelectorAll("section");
+        let sections = document.querySelectorAll("section.show");
+
+        window.addEventListener("resize", () => {
+            sections = document.querySelectorAll("section.show");
+        })
 
         function sectionCheck(){
             sections.forEach((section, index) => {
-                if(scrollTop >= section.offsetTop-10){
+                if(scrollTop >= section.offsetTop-8){
                     document.querySelectorAll(".navigation ul li").forEach(li => {
                         li.classList.remove("active");
                     });
@@ -935,6 +882,48 @@
         if (os.indexOf("macintosh") >= 0) {
             pointColor2.style.paddingTop = "0.2vw";
         } 
+    </script>
+
+    <!-- 가로 섹션 안보이게 -->
+    <script>
+        const horizonSection = document.querySelectorAll(".horizon");
+        const verticalSection = document.querySelectorAll(".vertical");
+        const reactNav = document.querySelectorAll(".reactNav");
+        const vueNav = document.querySelectorAll(".vueNav");
+        const phpNav = document.querySelectorAll(".phpNav");
+
+        window.addEventListener("resize", sectionHide)
+
+        function sectionHide() {
+            verticalGsap();
+            if(window.innerWidth <= 1200){
+                reactNav.forEach(e => {
+                    e.setAttribute("href", "#react2");
+                })
+                vueNav.forEach(e => {
+                    e.setAttribute("href", "#vue2");
+                })
+                phpNav.forEach(e=>{
+                    e.setAttribute("href", "#php2");
+                })
+                horizonSection.forEach( e => {
+                    e.classList.remove("show");
+                });
+                verticalSection.forEach( e => {
+                    e.classList.add("show");
+                });
+            }else {
+                reactNav.setAttribute("href", "#react");
+                vueNav.setAttribute("href", "#vue");
+                phpNav.setAttribute("href", "#php");
+                horizonSection.forEach( e => {
+                    e.classList.add("show");
+                });
+                verticalSection.forEach( e => {
+                    e.classList.remove("show");
+                });
+            }
+        }
     </script>
   </body>
 </html>
