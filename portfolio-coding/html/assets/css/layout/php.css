@@ -183,7 +183,7 @@
     margin: 0 auto;
     width: 48%;
     word-break: keep-all;
-    margin-top: 6.6vw;
+    /* margin-top: 6.6vw; */
     padding: 7vw 8vw 5.5vw;
     transform: translateX(3.2%);
     border-radius: 10px;
@@ -215,7 +215,7 @@
     width: 100%;
     object-fit: contain;
     position: absolute;
-    top: 0;
+    top: -6vw;
     z-index: -1;
 }
 

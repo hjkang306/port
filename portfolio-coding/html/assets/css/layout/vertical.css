@@ -1,6 +1,7 @@
 .vertical {
     display: none;
     margin-bottom: 20vw;
+    overflow-y: hidden;
 }
 .vertical.show {
     display: block;
@@ -157,3 +158,18 @@
 #php2 .vertical__figure__inner .figure2 .figureImg {background: url(../../img/php02-min.jpg);}
 #php2 .vertical__figure__inner .figure3 .figureImg {background: url(../../img/php03-min.jpg);}
 #php2 .vertical__figure__inner .figure4 .figureImg {background: url(../../img/php04-min.jpg);}
+
+@media(max-width: 900px){
+    .vertical__figure__inner .figure .figureImg {
+        transform: scale(0.9);
+    }
+    .vertical__figure__inner .figure a {
+        color: var(--white);
+        font-size: 3vw;
+        transform: scaleX(1);
+    }
+    .vertical__figure__inner .figure a.page__btn {transform: translate(-89%, -85%);}
+    .vertical__figure__inner .figure a.source__btn {transform: translate(-89%, 25%);}
+    .vertical__figure__inner .figure:nth-child(even) a.page__btn {transform: translate(89%, -85%);}
+    .vertical__figure__inner .figure:nth-child(even) a.source__btn {transform: translate(89%, 25%);}
+}
