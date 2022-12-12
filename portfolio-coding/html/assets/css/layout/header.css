@@ -164,3 +164,45 @@ details[open] > summary::after {
     width: 15vw;
   }
 }
+
+@media (max-width: 900px){
+  .details__inner:first-child {
+    display: none;
+  }
+  .details__inner:last-child {
+    width: auto;
+  }
+  .logo a svg {
+    width: auto;
+    height: 6vw;
+  }
+  .navigation {
+    width: 25vw;
+  }
+  .navigation ul {
+    font-size: 3vw;
+    padding: 3vw;
+  }
+  .navigation summary {
+    font-size: 3vw;
+  }
+  details > summary::after {
+    content: 'v';
+    text-transform: lowercase;
+    font-size: 2vw;
+    line-height: 1;
+    float: right;
+    margin-top: 0.5vw;
+  }
+  details[open] > summary::after {
+    content: '-';
+    font-size: 2vw;
+  }
+  .navigation ul li {
+    margin-top: 2.5vw;
+  }
+  .navigation ul li:first-child {
+    margin-top: 0;
+  }
+  
+}

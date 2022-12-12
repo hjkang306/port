@@ -70,61 +70,61 @@ setTimeout(() => {
         rotation: 45,
         ease: Power3.easeOut,
     })
-        .to(
-            "#home .figure3",
-            {
-                duration: 0.5,
-                y: 0,
-                opacity: 1,
-                rotation: 45,
-                ease: Power3.easeOut,
-            },
-            "-=0.2"
-        )
-        .to(
-            "#home .figure2",
-            {
-                duration: 0.5,
-                y: 0,
-                opacity: 1,
-                rotation: 45,
-                ease: Power3.easeOut,
-            },
-            "-=0.2"
-        )
-        .to(
-            "#home .figure5",
-            {
-                duration: 0.5,
-                y: 0,
-                opacity: 1,
-                rotation: 45,
-                ease: Power3.easeOut,
-            },
-            "-=0.2"
-        )
-        .to(
-            "#home .figure4",
-            {
-                duration: 0.5,
-                y: 0,
-                opacity: 1,
-                rotation: 45,
-                ease: Power3.easeOut,
-            },
-            "-=0.2"
-        )
-        .to("#home .homeDecoInner", {
+    .to(
+        "#home .figure3",
+        {
             duration: 0.5,
-            opacity: 1,
-            ease: Power3.easeIn,
-        })
-        .to("#home .move__text__inner", {
-            duration: 0.7,
             y: 0,
             opacity: 1,
-            ease: Power4.easeOut,
-        });
+            rotation: 45,
+            ease: Power3.easeOut,
+        },
+        "-=0.2"
+    )
+    .to(
+        "#home .figure2",
+        {
+            duration: 0.5,
+            y: 0,
+            opacity: 1,
+            rotation: 45,
+            ease: Power3.easeOut,
+        },
+        "-=0.2"
+    )
+    .to(
+        "#home .figure5",
+        {
+            duration: 0.5,
+            y: 0,
+            opacity: 1,
+            rotation: 45,
+            ease: Power3.easeOut,
+        },
+        "-=0.2"
+    )
+    .to(
+        "#home .figure4",
+        {
+            duration: 0.5,
+            y: 0,
+            opacity: 1,
+            rotation: 45,
+            ease: Power3.easeOut,
+        },
+        "-=0.2"
+    )
+    .to("#home .homeDecoInner", {
+        duration: 0.5,
+        opacity: 1,
+        ease: Power3.easeIn,
+    })
+    .to("#home .move__text__inner", {
+        duration: 0.7,
+        y: 0,
+        opacity: 1,
+        ease: Power4.easeOut,
+    });
 }, 0);
 
 // 컨택트
@@ -199,14 +199,14 @@ let tl2 = gsap
 
 // 홈 스크롤 애니메이션
 const homeFig = gsap.utils.toArray("#home .figure");
-gsap.set(homeFig, { rotation: 520 });
 
 gsap.to(homeFig, {
-    rotation: 360,
+    rotation: 55,
     scrollTrigger: {
         trigger: "#home",
         scrub: true,
         markers: true,
+        end: "50%"
     },
 });
 

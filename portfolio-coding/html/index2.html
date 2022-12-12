@@ -81,8 +81,8 @@
     <main id="main">
       <section id="home" class="show">
         <div class="move__text__inner">
-          <h2 class="main__title animation01">journey • to • be • front-end • developer •&nbsp;</h2>
-          <h2 class="main__title animation01">journey • to • be • front-end • developer •&nbsp;</h2>
+            <h2 class="main__title animation01">journey • to • be • front-end • developer •&nbsp;</h2>
+            <h2 class="main__title animation01">journey • to • be • front-end • developer •&nbsp;</h2>
         </div>
         <div class="figure__inner">
             <div class="homeDecoInner">
@@ -103,20 +103,22 @@
 
       <section id="about" class="show">
         <div class="about__title__section">
-          <div class="move__text__inner">
-            <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
-            <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
-          </div>
-          <div class="figure__inner">
-            <div class="figure figure1"></div>
-            <div class="figure figure2"></div>
-            <div class="figure figure3"></div>
-            <div class="figure figure4"></div>
-            <div class="figure figure5"></div>
-            <div class="figure figure6"></div>
-            <div class="figure figure7"></div>
-            <div class="figure figure8"></div>
-          </div>
+            <div class="about__title__section__inner">
+                <div class="move__text__inner">
+                  <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
+                  <h3 class="about__title animation01">About • Me • About • Me •&nbsp;</h3>
+                </div>
+                <div class="figure__inner">
+                  <div class="figure figure1"></div>
+                  <div class="figure figure2"></div>
+                  <div class="figure figure3"></div>
+                  <div class="figure figure4"></div>
+                  <div class="figure figure5"></div>
+                  <div class="figure figure6"></div>
+                  <div class="figure figure7"></div>
+                  <div class="figure figure8"></div>
+                </div>
+            </div>
         </div>
         <!-- about__title__section -->
 
@@ -146,14 +148,13 @@
         <div class="about__me02 container">
             <div class="about__me02__text">
                 <div class="about__me02__text__tit">
-                    성실하고 열정이 있는 인재, <span class="point__color">도전과 노력으로</span> 일하는 사람,<br>
-                    가장 빛나는 전문가가 되기 위하여, 마음 먹은 일은<br>
-                    꼭 하고 마는 사람
+                    성실하고 열정이 있는 인재, <span class="point__color">도전과 노력으로</span> 일하는 사람,
+                    가장 빛나는 전문가가 되기 위하여, 마음 먹은 일은 꼭 하고 마는 사람
                 </div>
                 <p class="about__me02__text__desc">
-                    “인내의 기술을 배워라. 목표를 달성할 수 있을지 마음이 불안해 질 때,<br>
-                    단련한 대로 마음을 다스려라. 인내하지 못하면 긴장감과 두려움이 생기고<br>
-                    낙담해 실패한다. 인내할 줄 알아야 자신감, 결단력, 합리적 시각이<br>
+                    “인내의 기술을 배워라. 목표를 달성할 수 있을지 마음이 불안해 질 때,
+                    단련한 대로 마음을 다스려라. 인내하지 못하면 긴장감과 두려움이 생기고
+                    낙담해 실패한다. 인내할 줄 알아야 자신감, 결단력, 합리적 시각이
                     생겨서 끝내 성공할 수 있다.”<br>
                     - 브라이언 아담스 -
                 </p>
@@ -913,9 +914,15 @@
                     e.classList.add("show");
                 });
             }else {
-                reactNav.setAttribute("href", "#react");
-                vueNav.setAttribute("href", "#vue");
-                phpNav.setAttribute("href", "#php");
+                reactNav.forEach(e => {
+                    e.setAttribute("href", "#react");
+                })
+                vueNav.forEach(e => {
+                    e.setAttribute("href", "#vue");
+                })
+                phpNav.forEach(e=>{
+                    e.setAttribute("href", "#php");
+                })
                 horizonSection.forEach( e => {
                     e.classList.add("show");
                 });
