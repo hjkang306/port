@@ -53,79 +53,123 @@ function fixCheck() {
 }
 
 // 인트로
-gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#home .figure2", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#home .figure3", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#home .figure4", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#home .figure5", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#home .homeDecoInner", { opacity: 0 });
-gsap.set("#home .move__text__inner", { y: 200, opacity: 0 });
-setTimeout(() => {
-    let tl = gsap.timeline();
+function imagesProgress(){
+    const noticeClose = document.querySelector(".notice__close");
+    const main = document.querySelector("#main");
+    var $container = $("#progress"),
+        $notice = $(".notice"),
+        $progressText = $container.find(".progress-text"),
+        imgLoad = imagesLoaded("body"),	
+        imgTotal = imgLoad.images.length,	
+        imgLoaded = 0,										
+        current = 0,							
+        progressTimer = setInterval(updateProgress, 2000 / 60);	
 
-    tl.to("#home .figure1", {
-        duration: 0.5,
-        y: 0,
-        opacity: 1,
-        rotation: 45,
-        ease: Power3.easeOut,
-    })
-    .to(
-        "#home .figure3",
-        {
-            duration: 0.5,
-            y: 0,
-            opacity: 1,
-            rotation: 45,
-            ease: Power3.easeOut,
-        },
-        "-=0.2"
-    )
-    .to(
-        "#home .figure2",
-        {
-            duration: 0.5,
-            y: 0,
-            opacity: 1,
-            rotation: 45,
-            ease: Power3.easeOut,
-        },
-        "-=0.2"
-    )
-    .to(
-        "#home .figure5",
-        {
-            duration: 0.5,
-            y: 0,
-            opacity: 1,
-            rotation: 45,
-            ease: Power3.easeOut,
-        },
-        "-=0.2"
-    )
-    .to(
-        "#home .figure4",
-        {
-            duration: 0.5,
-            y: 0,
-            opacity: 1,
-            rotation: 45,
-            ease: Power3.easeOut,
-        },
-        "-=0.2"
-    )
-    .to("#home .homeDecoInner", {
-        duration: 0.5,
-        opacity: 1,
-        ease: Power3.easeIn,
-    })
-    .to("#home .move__text__inner", {
-        duration: 0.7,
-        y: 0,
-        opacity: 1,
-        ease: Power4.easeOut,
-    });
-}, 0);
+        imgLoad.on("progress", function(){
+            imgLoaded++;
+        });
+
+    function updateProgress(){
+        var target = ( imgLoaded / imgTotal) * 100;
+
+        current += ( target - current) * 0.1;
+        $progressText.text( Math.floor(current) + '%' );
+
+        if(current >= 100){
+            clearInterval(progressTimer);
+            $container.animate({opacity: '0'},500,'easeInOutQuint').animate({top: '-100%'},500);
+            $notice.animate({opacity: '1'},1500,'easeInOutQuint');
+            noticeClose.addEventListener("click", () => {
+                main.style.opacity = 1;
+                $notice.animate({opacity: '0'},500,'easeInOutQuint');
+                gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 0 });
+                gsap.set("#home .figure2", { y: -500, opacity: 0, rotation: 0 });
+                gsap.set("#home .figure3", { y: -500, opacity: 0, rotation: 0 });
+                gsap.set("#home .figure4", { y: -500, opacity: 0, rotation: 0 });
+                gsap.set("#home .figure5", { y: -500, opacity: 0, rotation: 0 });
+                gsap.set("#home .homeDecoInner", { opacity: 0 });
+                gsap.set("#home .move__text__inner", { y: 200, opacity: 0 });
+    
+                let tl = gsap.timeline();
+                tl.to("#home .figure1", {
+                    duration: 0.5,
+                    y: 0,
+                    opacity: 1,
+                    rotation: 45,
+                    ease: Power3.easeOut,
+                })
+                .to(
+                    "#home .figure3",
+                    {
+                        duration: 0.5,
+                        y: 0,
+                        opacity: 1,
+                        rotation: 45,
+                        ease: Power3.easeOut,
+                    },
+                    "-=0.2"
+                )
+                .to(
+                    "#home .figure2",
+                    {
+                        duration: 0.5,
+                        y: 0,
+                        opacity: 1,
+                        rotation: 45,
+                        ease: Power3.easeOut,
+                    },
+                    "-=0.2"
+                )
+                .to(
+                    "#home .figure5",
+                    {
+                        duration: 0.5,
+                        y: 0,
+                        opacity: 1,
+                        rotation: 45,
+                        ease: Power3.easeOut,
+                    },
+                    "-=0.2"
+                )
+                .to(
+                    "#home .figure4",
+                    {
+                        duration: 0.5,
+                        y: 0,
+                        opacity: 1,
+                        rotation: 45,
+                        ease: Power3.easeOut,
+                    },
+                    "-=0.2"
+                )
+                .to("#home .homeDecoInner", {
+                    duration: 0.5,
+                    opacity: 1,
+                    ease: Power3.easeIn,
+                })
+                .to("#home .move__text__inner", {
+                    duration: 0.7,
+                    y: 0,
+                    opacity: 1,
+                    ease: Power4.easeOut,
+                })
+                .to("#header", {
+                    duration: 0.7,
+                    y: 0,
+                    opacity: 1,
+                    ease: Power4.easeOut,
+                });
+            })
+
+        }
+        if(current > 99.9){
+            current = 100;
+        };
+    };
+};
+
+imagesProgress();
+
 
 // 컨택트
 gsap.set("#contact .figure1", { y: -500, opacity: 0, rotation: 0 });
@@ -136,28 +180,7 @@ gsap.set("#contact .figure5", { y: -500, opacity: 0, rotation: 0 });
 gsap.set("#contact .contactDecoInner", { opacity: 0 });
 gsap.set("#contact .move__text__inner", { y: 200, opacity: 0 });
 
-// gsap.to("#contact .figure1", {
-//     duration: 2,
-//     y: 0,
-//     opacity: 1,
-//     rotation: 45,
-//     scrollTrigger: {
-//         ease: "power3.easeOut",
-//         trigger: "#contact",
-//         start: "top top",
-//         markers: true
-//     }
-// });
-
-let tl2 = gsap
-    .timeline({
-        // scrollTrigger: {
-        //     ease: "Power3.easeOut",
-        //     trigger: "#contact",
-        //     markers: true,
-        //     scrub: 1,
-        // }
-    })
+let tl2 = gsap.timeline()
     .to("#contact .figure1", {
         duration: 0.5,
         y: 0,

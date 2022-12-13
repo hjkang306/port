@@ -10,7 +10,6 @@
     <!-- <link rel="stylesheet" href="index2.css"> -->
   </head>
   <body id="index2">
-    <!-- class="fixed" -->
     <div id="skip">
       <a href="#home">home 바로 가기</a>
       <a href="#about">about 바로 가기</a>
@@ -23,6 +22,10 @@
     <!-- //skip -->
 
     <div class="scrollTop"></div>
+
+    <div id="progress">
+        <div class="progress-text">0</div>
+    </div>
     
     <div class="notice">
         <h3 class="notice__tit">check point !</h3>
@@ -799,22 +802,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollToPlugin3.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/color.js"></script>
     <script src="assets/js/scroll.js"></script>
     <script>
       $(".drag").draggable({ opacity: 0.8 });
     </script>
 
-    <!-- notice -->
+    <!-- onload -->
     <script>
-        const notice = document.querySelector(".notice");
-        const noticeClose = document.querySelector(".notice__close");
-
-        noticeClose.addEventListener("click", () => {
-            notice.classList.remove("show");
-            document.body.classList.remove("fixed")
-        })
-
         // 새로고침하면 스크롤 맨 위로
         window.onload = function(){
             sectionHide();
@@ -824,26 +820,7 @@
             setTimeout(function(){
                 scrollTo(0,0);
             }, 100);
-            setTimeout(()=>{
-                notice.classList.add("show");
-            }, 500);
         }
-    </script>
-
-    <!-- 모양 -->
-    <script>
-        const homeFigure = document.querySelectorAll("#home .figure");
-        let moyang = ["", "circle", "water"];
-        let mNum = 0;
-        // setInterval(() => {
-        //     homeFigure.forEach(e => {
-        //         e.classList.remove("circle");
-        //         e.classList.remove("water");
-        //         // e.classList.add(moyang[mNum%3]);
-        //     });
-        //     console.log(moyang[mNum%3])
-        //     mNum++;
-        // }, 3000)
     </script>
 
     <!-- 네비게이션 -->

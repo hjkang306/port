@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   z-index: 3;
+  opacity: 0;
 }
 .header__inner {
   display: flex;

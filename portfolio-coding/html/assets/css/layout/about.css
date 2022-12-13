@@ -242,6 +242,9 @@
         top: 31.2vw;
         left: 41.6vw;
     }
+    .about__me01__text {
+        font-size: 3.6vw;
+    }
     .about__me02__text__tit {
         text-align: center;
         width: 100%;
