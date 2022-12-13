@@ -166,6 +166,7 @@ function imagesProgress(){
 
         current += ( target - current) * 0.1;
         $progressText.text( Math.floor(current) );
+        $progressText.css("letter-spacing", 1000 - current * 10 + "px" );
 
         if(current >= 100){
             clearInterval(progressTimer);
@@ -554,8 +555,9 @@ gsap.to(".about__me02__text__desc", {
     scrollTrigger: {
         trigger: ".about__me02__text",
         scrub: 1,
-        end: "bottom bottom",
-        markers: true
+        start: "top 100%",
+        end: "top 80%",
+        // markers: true
     },
 });
 
