@@ -1,5 +1,97 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// onload
+let sections = document.querySelectorAll("section.show");
+
+// 새로고침하면 스크롤 맨 위로
+window.onload = function(){
+    sectionHide();
+    sections = document.querySelectorAll("section.show");
+    sectionCheck();
+    verticalGsap();
+    setTimeout(function(){
+        scrollTo(0,0);
+    }, 100);
+}
+
+//네비게이션
+window.addEventListener("resize", () => {
+    sections = document.querySelectorAll("section.show");
+})
+
+function sectionCheck(){
+    sections = document.querySelectorAll("section.show");
+    sections.forEach((section, index) => {
+        if(scrollTop >= section.offsetTop-8){
+            document.querySelectorAll(".navigation ul li").forEach(li => {
+                li.classList.remove("active");
+            });
+            document.querySelector(".navigation ul li:nth-child("+(index+1)+")").classList.add("active");
+        }
+
+    })
+}
+window.addEventListener("scroll", sectionCheck);
+
+document.querySelectorAll(".navigation ul li a").forEach(a => {
+    a.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+// 가로 섹션 안보이게
+const horizonSection = document.querySelectorAll(".horizon");
+const verticalSection = document.querySelectorAll(".vertical");
+const reactNav = document.querySelectorAll(".reactNav");
+const vueNav = document.querySelectorAll(".vueNav");
+const phpNav = document.querySelectorAll(".phpNav");
+
+window.addEventListener("resize", sectionHide)
+
+function sectionHide() {
+    verticalGsap();
+    if(window.innerWidth <= 1200){
+        reactNav.forEach(e => {
+            e.setAttribute("href", "#react2");
+        })
+        vueNav.forEach(e => {
+            e.setAttribute("href", "#vue2");
+        })
+        phpNav.forEach(e=>{
+            e.setAttribute("href", "#php2");
+        })
+        horizonSection.forEach( e => {
+            e.classList.remove("show");
+        });
+        verticalSection.forEach( e => {
+            e.classList.add("show");
+        });
+        sectionCheck()
+    }else {
+        reactNav.forEach(e => {
+            e.setAttribute("href", "#react");
+        })
+        vueNav.forEach(e => {
+            e.setAttribute("href", "#vue");
+        })
+        phpNav.forEach(e=>{
+            e.setAttribute("href", "#php");
+        })
+        horizonSection.forEach( e => {
+            e.classList.add("show");
+        });
+        verticalSection.forEach( e => {
+            e.classList.remove("show");
+        });
+        sectionCheck()
+    }
+}
+
+
+// gsap
 const aboutImg = document.querySelectorAll(".about__me01__img");
 const about = document.querySelector("#about");
 const aboutMe01 = document.querySelector(".about__me01");
@@ -84,11 +176,11 @@ function imagesProgress(){
                 $notice.css("pointer-events", "none");
                 main.style.opacity = 1;
                 $notice.animate({opacity: '0'},500,'easeInOutQuint');
-                gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 0 });
-                gsap.set("#home .figure2", { y: -500, opacity: 0, rotation: 0 });
-                gsap.set("#home .figure3", { y: -500, opacity: 0, rotation: 0 });
-                gsap.set("#home .figure4", { y: -500, opacity: 0, rotation: 0 });
-                gsap.set("#home .figure5", { y: -500, opacity: 0, rotation: 0 });
+                gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 720 });
+                gsap.set("#home .figure2", { y: -500, opacity: 0, rotation: 720 });
+                gsap.set("#home .figure3", { y: -500, opacity: 0, rotation: 720 });
+                gsap.set("#home .figure4", { y: -500, opacity: 0, rotation: 720 });
+                gsap.set("#home .figure5", { y: -500, opacity: 0, rotation: 720 });
                 gsap.set("#home .homeDecoInner", { opacity: 0 });
                 gsap.set("#home .move__text__inner", { y: 200, opacity: 0 });
     
@@ -174,53 +266,59 @@ imagesProgress();
 
 
 // 컨택트
-gsap.set("#contact .figure1", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#contact .figure2", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#contact .figure3", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#contact .figure4", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#contact .figure5", { y: -500, opacity: 0, rotation: 0 });
-gsap.set("#contact .contactDecoInner", { opacity: 0 });
-gsap.set("#contact .move__text__inner", { y: 200, opacity: 0 });
-
-let tl2 = gsap.timeline()
-    .to("#contact .figure1", {
-        duration: 0.5,
-        y: 0,
-        opacity: 1,
-        rotation: 45,
-        ease: Power3.easeOut,
-    })
-    .to(
-        "#contact .figure3",
-        { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
-        "-=0.2"
-    )
-    .to(
-        "#contact .figure2",
-        { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
-        "-=0.2"
-    )
-    .to(
-        "#contact .figure5",
-        { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
-        "-=0.2"
-    )
-    .to(
-        "#contact .figure4",
-        { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
-        "-=0.2"
-    )
-    .to("#contact .contactDecoInner", {
-        duration: 0.5,
-        opacity: 1,
-        ease: Power3.easeIn,
-    })
-    .to("#contact .move__text__inner", {
-        duration: 0.7,
-        y: 0,
-        opacity: 1,
-        ease: Power4.easeOut,
-    });
+// ScrollTrigger.create({
+//     trigger: "#contact",
+//     onEnter: contactAnimation()
+// });
+function contactAnimation(){
+    gsap.set("#contact .figure1", { y: -500, opacity: 0, rotation: 720 });
+    gsap.set("#contact .figure2", { y: -500, opacity: 0, rotation: 720 });
+    gsap.set("#contact .figure3", { y: -500, opacity: 0, rotation: 720 });
+    gsap.set("#contact .figure4", { y: -500, opacity: 0, rotation: 720 });
+    gsap.set("#contact .figure5", { y: -500, opacity: 0, rotation: 720 });
+    gsap.set("#contact .contactDecoInner", { opacity: 0 });
+    gsap.set("#contact .move__text__inner", { y: 200, opacity: 0 });
+    
+    let tl2 = gsap.timeline()
+        .to("#contact .figure1", {
+            duration: 0.5,
+            y: 0,
+            opacity: 1,
+            rotation: 45,
+            ease: Power3.easeOut,
+        })
+        .to(
+            "#contact .figure3",
+            { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
+            "-=0.2"
+        )
+        .to(
+            "#contact .figure2",
+            { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
+            "-=0.2"
+        )
+        .to(
+            "#contact .figure5",
+            { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
+            "-=0.2"
+        )
+        .to(
+            "#contact .figure4",
+            { duration: 0.5, y: 0, opacity: 1, rotation: 45, ease: Power3.easeOut },
+            "-=0.2"
+        )
+        .to("#contact .contactDecoInner", {
+            duration: 0.5,
+            opacity: 1,
+            ease: Power3.easeIn,
+        })
+        .to("#contact .move__text__inner", {
+            duration: 0.7,
+            y: 0,
+            opacity: 1,
+            ease: Power4.easeOut,
+        });
+}
 
 // 홈 스크롤 애니메이션
 const homeFig = gsap.utils.toArray("#home .figure");
@@ -452,11 +550,12 @@ gsap.set(".about__me02__text__desc", { opacity: 0, yPercent: 100 });
 gsap.to(".about__me02__text__desc", {
     opacity: 1,
     yPercent: 0,
-    ease: "power4.easeInOut",
+    ease: "power4.easeOut",
     scrollTrigger: {
         trigger: ".about__me02__text",
-        scrub: 5,
-        end: "20%"
+        scrub: 1,
+        end: "bottom bottom",
+        markers: true
     },
 });
 

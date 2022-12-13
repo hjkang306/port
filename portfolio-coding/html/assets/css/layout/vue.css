@@ -17,7 +17,7 @@
 }
 .vue__section .move__text__inner {
     width: 200%;
-    margin-top: 250px;
+    margin-top: 25vh;
     z-index: 1;
     pointer-events: none;
     opacity: 0.8;

@@ -449,7 +449,7 @@
       <!-- effect -->
 
       <!-- site -->
-      <section id="react" class="horizon">
+      <section id="react" class="horizon show">
         <div class="react__wrap">
             <div class="react__section__inner">
                 <div class="react__section react__section01">
@@ -547,7 +547,7 @@
       </section>
       <!-- react -->
 
-      <section id="vue" class="horizon">
+      <section id="vue" class="horizon show">
         <div class="vue__wrap">
             <div class="vue__section__inner">
                 <div class="vue__section vue__section01">
@@ -649,7 +649,7 @@
       </section>
       <!-- vue -->
 
-      <section id="php" class="horizon">
+      <section id="php" class="horizon show">
         <div class="php__wrap">
             <div class="php__section__inner">
                 <div class="php__section php__section01">
@@ -820,51 +820,6 @@
       $(".drag").draggable({ opacity: 0.8 });
     </script>
 
-    <!-- onload -->
-    <script>
-        // 새로고침하면 스크롤 맨 위로
-        window.onload = function(){
-            sectionHide();
-            sections = document.querySelectorAll("section.show");
-            sectionCheck();
-            verticalGsap();
-            setTimeout(function(){
-                scrollTo(0,0);
-            }, 100);
-        }
-    </script>
-
-    <!-- 네비게이션 -->
-    <script>
-        let sections = document.querySelectorAll("section.show");
-
-        window.addEventListener("resize", () => {
-            sections = document.querySelectorAll("section.show");
-        })
-
-        function sectionCheck(){
-            sections.forEach((section, index) => {
-                if(scrollTop >= section.offsetTop-8){
-                    document.querySelectorAll(".navigation ul li").forEach(li => {
-                        li.classList.remove("active");
-                    });
-                    document.querySelector(".navigation ul li:nth-child("+(index+1)+")").classList.add("active");
-                }
-
-            })
-        }
-        window.addEventListener("scroll", sectionCheck);
-
-        document.querySelectorAll(".navigation ul li a").forEach(a => {
-            a.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(a.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
-    </script>
-
     <!-- agent -->
     <script>
         const os = navigator.userAgent.toLocaleLowerCase();
@@ -875,52 +830,6 @@
         } 
     </script>
 
-    <!-- 가로 섹션 안보이게 -->
-    <script>
-        const horizonSection = document.querySelectorAll(".horizon");
-        const verticalSection = document.querySelectorAll(".vertical");
-        const reactNav = document.querySelectorAll(".reactNav");
-        const vueNav = document.querySelectorAll(".vueNav");
-        const phpNav = document.querySelectorAll(".phpNav");
-
-        window.addEventListener("resize", sectionHide)
-
-        function sectionHide() {
-            verticalGsap();
-            if(window.innerWidth <= 1200){
-                reactNav.forEach(e => {
-                    e.setAttribute("href", "#react2");
-                })
-                vueNav.forEach(e => {
-                    e.setAttribute("href", "#vue2");
-                })
-                phpNav.forEach(e=>{
-                    e.setAttribute("href", "#php2");
-                })
-                horizonSection.forEach( e => {
-                    e.classList.remove("show");
-                });
-                verticalSection.forEach( e => {
-                    e.classList.add("show");
-                });
-            }else {
-                reactNav.forEach(e => {
-                    e.setAttribute("href", "#react");
-                })
-                vueNav.forEach(e => {
-                    e.setAttribute("href", "#vue");
-                })
-                phpNav.forEach(e=>{
-                    e.setAttribute("href", "#php");
-                })
-                horizonSection.forEach( e => {
-                    e.classList.add("show");
-                });
-                verticalSection.forEach( e => {
-                    e.classList.remove("show");
-                });
-            }
-        }
-    </script>
+    
   </body>
 </html>
