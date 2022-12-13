@@ -114,7 +114,7 @@
   width: 36px;
   height: 36px;
   left: 50%;
-  top: 30%;
+  top: 50%;
   animation: loader-spin 2s linear infinite reverse;
   filter: url(#goo);
   box-shadow: 0 0 0 1px #ff974d inset;
