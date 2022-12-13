@@ -72,7 +72,8 @@
     left: 12vw;
     overflow: hidden;
     transition: border-radius .2s;
-  }
+    transform: rotate(45deg);
+}
 #contact .figure1:hover {
     border-radius: 50%;
 }
@@ -87,18 +88,21 @@
     top: 25vw;
     left: 16.5vw;
     z-index: 2;
+    transform: rotate(45deg);
 }
 #contact .figure3 {
     width: 9vw;
     height: 9vw;
     top: 19vw;
     left: 37vw;
+    transform: rotate(45deg);
 }
 #contact .figure4 {
     width: 21vw;
     height: 21vw;
     top: 17.5vw;
     left: 50vw;
+    transform: rotate(45deg);
 }
 #contact .figure5 {
     width: 11vw;
@@ -106,6 +110,7 @@
     top: 18.5vw;
     left: 75vw;
     z-index: 2;
+    transform: rotate(45deg);
 }
 
 /* contact__address__section */
@@ -227,7 +232,7 @@
       height: 35vw;
       top: -8vw;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) rotate(45deg);
       z-index: 1;
     }
     #contact .figure1 img {
