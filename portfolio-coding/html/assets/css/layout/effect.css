@@ -98,6 +98,7 @@
     height: 100vh;
     background: var(--black);
     padding: 0 10vw;
+    padding-top: calc(30vh - 30vw);
 }
 .effect__desc {
     width: 19.5vw;
@@ -290,8 +291,8 @@
     .effect__tit {
         font-family: var(--font-eng);
         font-size: 4vw;
-        position: absolute;
-        top: 100vw;
+        position: static;
+        margin-top: 8vw;
     }
     .effect__img__wrap a .effect__btn {
         opacity: 1;
