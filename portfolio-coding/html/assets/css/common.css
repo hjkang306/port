@@ -80,3 +80,13 @@ img {
 .horizon.show {
     display: block;
 }
+
+/* progress */
+.progress {}
+.progress-text {
+    font-size: 20vw;
+    text-align: center;
+    line-height: 100vh;
+    color: var(--white);
+    opacity: 0.5;
+}

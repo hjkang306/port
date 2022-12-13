@@ -10,7 +10,7 @@ let scrollTop = 0;
 // 스크롤 값 + 이미지 바뀌기
 function scroll() {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+    // document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
     requestAnimationFrame(scroll);
 
     if (scrollTop > 2900 && scrollTop < 3500) {
@@ -52,7 +52,7 @@ function fixCheck() {
     }
 }
 
-// 인트로
+// 인트로(+로딩소스)
 function imagesProgress(){
     const noticeClose = document.querySelector(".notice__close");
     const main = document.querySelector("#main");
@@ -73,13 +73,15 @@ function imagesProgress(){
         var target = ( imgLoaded / imgTotal) * 100;
 
         current += ( target - current) * 0.1;
-        $progressText.text( Math.floor(current) + '%' );
+        $progressText.text( Math.floor(current) );
 
         if(current >= 100){
             clearInterval(progressTimer);
-            $container.animate({opacity: '0'},500,'easeInOutQuint').animate({top: '-100%'},500);
+            $container.animate({opacity: '0'},500,'easeInOutQuint');
+            $container.css("display", "none");
             $notice.animate({opacity: '1'},1500,'easeInOutQuint');
             noticeClose.addEventListener("click", () => {
+                $notice.css("pointer-events", "none");
                 main.style.opacity = 1;
                 $notice.animate({opacity: '0'},500,'easeInOutQuint');
                 gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 0 });
@@ -222,9 +224,11 @@ let tl2 = gsap.timeline()
 
 // 홈 스크롤 애니메이션
 const homeFig = gsap.utils.toArray("#home .figure");
-
+gsap.set(homeFig, {
+    rotation: 45
+});
 gsap.to(homeFig, {
-    rotation: 55,
+    rotation: 70,
     scrollTrigger: {
         trigger: "#home",
         scrub: true,
@@ -451,7 +455,8 @@ gsap.to(".about__me02__text__desc", {
     ease: "power4.easeInOut",
     scrollTrigger: {
         trigger: ".about__me02__text",
-        scrub: 1,
+        scrub: 5,
+        end: "20%"
     },
 });
 

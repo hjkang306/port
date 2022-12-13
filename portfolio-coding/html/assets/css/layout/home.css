@@ -130,7 +130,7 @@
     width: 35vw;
     height: 35vw;
     top: -8vw;
-    left: 46vw;
+    left: 50%;
     transform: translateX(-50%);
   }
   #home .figure1 .sunglass {

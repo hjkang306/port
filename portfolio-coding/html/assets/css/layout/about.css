@@ -257,7 +257,7 @@
         text-align: center;
         font-size: 18px;
         word-break: keep-all;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
     }
     .about__me02 {
         min-height: auto;
@@ -272,10 +272,10 @@
         margin-top: 0.5vw;
     }
     .about__me02__img__wrap01 {
-        position: static;
+        position: static !important;
     }
     .about__me02__img__wrap02 {
-        position: static;
+        position: static !important;
     }
     .about__me02__img__wrap {
         width: 50vw;
