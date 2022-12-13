@@ -232,7 +232,7 @@ gsap.to(homeFig, {
     scrollTrigger: {
         trigger: "#home",
         scrub: true,
-        markers: true,
+        // markers: true,
         end: "50%"
     },
 });
