@@ -1,6 +1,11 @@
-/* font-family: 'SCoreDream'; */
-@import url('https://webfontworld.github.io/score/SCoreDream.css');
 /* font-family: 'Rubik' */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 /* font-family: 'SebangGothic'; */
 @import url('https://webfontworld.github.io/sebang/SebangGothic.css');
+/* font-family: 'NanumSquareNeo-Variable'; */
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
