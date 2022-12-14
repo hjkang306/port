@@ -75,7 +75,7 @@ img {
 
 /* horizon */
 .horizon {
-    display: none;
+    /* display: none; */
 }
 .horizon.show {
     display: block;
@@ -89,4 +89,15 @@ img {
     line-height: 100vh;
     color: var(--white);
     opacity: 0.5;
+}
+
+/* .vertical__tit */
+.vertical__tit {
+    display: none;
+}
+
+@media(max-width: 1200px){
+    .vertical__tit {
+        display: block;
+    }
 }

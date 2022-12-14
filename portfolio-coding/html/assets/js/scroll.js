@@ -1,7 +1,7 @@
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // onload
-let sections = document.querySelectorAll("section.show");
+// let sections = document.querySelectorAll("section.show");
 
 // 새로고침하면 스크롤 맨 위로
 window.onload = function(){
@@ -15,81 +15,82 @@ window.onload = function(){
 }
 
 //네비게이션
-window.addEventListener("resize", () => {
-    sections = document.querySelectorAll("section.show");
-})
+// window.addEventListener("resize", () => {
+//     sections = document.querySelectorAll("section.show");
+// })
 
-function sectionCheck(){
-    sections = document.querySelectorAll("section.show");
-    sections.forEach((section, index) => {
-        if(scrollTop >= section.offsetTop-8){
-            document.querySelectorAll(".navigation ul li").forEach(li => {
-                li.classList.remove("active");
-            });
-            document.querySelector(".navigation ul li:nth-child("+(index+1)+")").classList.add("active");
-        }
+// function sectionCheck(){
+//     sections = document.querySelectorAll("section.show");
+//     sections.forEach((section, index) => {
+//         if(scrollTop >= section.offsetTop-8){
+//             document.querySelectorAll(".navigation ul li").forEach(li => {
+//                 li.classList.remove("active");
+//             });
+//             document.querySelector(".navigation ul li:nth-child("+(index+1)+")").classList.add("active");
+//         }
 
-    })
-}
-window.addEventListener("scroll", sectionCheck);
+//     })
+// }
+// window.addEventListener("scroll", sectionCheck);
 
-document.querySelectorAll(".navigation ul li a").forEach(a => {
-    a.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(a.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
+// document.querySelectorAll(".navigation ul li a").forEach(a => {
+//     a.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         document.querySelector(a.getAttribute("href")).scrollIntoView({
+//             behavior: "smooth"
+//         });
+//     });
+// });
 
 // 가로 섹션 안보이게
-const horizonSection = document.querySelectorAll(".horizon");
-const verticalSection = document.querySelectorAll(".vertical");
-const reactNav = document.querySelectorAll(".reactNav");
-const vueNav = document.querySelectorAll(".vueNav");
-const phpNav = document.querySelectorAll(".phpNav");
+// const horizonSection = document.querySelectorAll(".horizon");
+// const verticalSection = document.querySelectorAll(".vertical");
+// const reactNav = document.querySelectorAll(".reactNav");
+// const vueNav = document.querySelectorAll(".vueNav");
+// const phpNav = document.querySelectorAll(".phpNav");
 
-window.addEventListener("resize", sectionHide)
+// window.addEventListener("resize", sectionHide)
 
-function sectionHide() {
-    verticalGsap();
-    if(window.innerWidth <= 1200){
-        reactNav.forEach(e => {
-            e.setAttribute("href", "#react2");
-        })
-        vueNav.forEach(e => {
-            e.setAttribute("href", "#vue2");
-        })
-        phpNav.forEach(e=>{
-            e.setAttribute("href", "#php2");
-        })
-        horizonSection.forEach( e => {
-            e.classList.remove("show");
-        });
-        verticalSection.forEach( e => {
-            e.classList.add("show");
-        });
-        sectionCheck()
-    }else {
-        reactNav.forEach(e => {
-            e.setAttribute("href", "#react");
-        })
-        vueNav.forEach(e => {
-            e.setAttribute("href", "#vue");
-        })
-        phpNav.forEach(e=>{
-            e.setAttribute("href", "#php");
-        })
-        horizonSection.forEach( e => {
-            e.classList.add("show");
-        });
-        verticalSection.forEach( e => {
-            e.classList.remove("show");
-        });
-        sectionCheck()
-    }
-}
-
+// function sectionHide() {
+//     verticalGsap();
+//     if(window.innerWidth <= 1200){
+//         reactNav.forEach(e => {
+//             e.setAttribute("href", "#react2");
+//         })
+//         vueNav.forEach(e => {
+//             e.setAttribute("href", "#vue2");
+//         })
+//         phpNav.forEach(e=>{
+//             e.setAttribute("href", "#php2");
+//         })
+//         horizonSection.forEach( e => {
+//             e.classList.remove("show");
+//         });
+//         verticalSection.forEach( e => {
+//             e.classList.add("show");
+//         });
+//         sectionCheck()
+//     }else {
+//         reactNav.forEach(e => {
+//             e.setAttribute("href", "#react");
+//         })
+//         vueNav.forEach(e => {
+//             e.setAttribute("href", "#vue");
+//         })
+//         phpNav.forEach(e=>{
+//             e.setAttribute("href", "#php");
+//         })
+//         horizonSection.forEach( e => {
+//             e.classList.add("show");
+//         });
+//         verticalSection.forEach( e => {
+//             e.classList.remove("show");
+//         });
+//         sectionCheck()
+//     }
+// }
+// 네비게이션 링크 바꾸기
+// if($(".vertical__tit").css("display") == "none"){}
 
 // gsap
 const aboutImg = document.querySelectorAll(".about__me01__img");
@@ -125,145 +126,145 @@ function scroll() {
 scroll();
 
 // 스무스
-const fixCheckIn = setInterval(() => {
-    fixCheck();
-}, 1000);
-function fixCheck() {
-    if ($("body").hasClass("fixed") === false) {
-        clearInterval(fixCheckIn);
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            smooth: true,
-        });
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-    }
-}
+// const fixCheckIn = setInterval(() => {
+//     fixCheck();
+// }, 1000);
+// function fixCheck() {
+//     if ($("body").hasClass("fixed") === false) {
+//         clearInterval(fixCheckIn);
+//         const lenis = new Lenis({
+//             duration: 1.2,
+//             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//             smooth: true,
+//         });
+//         function raf(time) {
+//             lenis.raf(time);
+//             requestAnimationFrame(raf);
+//         }
+//         requestAnimationFrame(raf);
+//     }
+// }
 
 // 인트로(+로딩소스)
-function imagesProgress(){
-    const noticeClose = document.querySelector(".notice__close");
-    const main = document.querySelector("#main");
-    var $container = $("#progress"),
-        $notice = $(".notice"),
-        $progressText = $container.find(".progress-text"),
-        imgLoad = imagesLoaded("body"),	
-        imgTotal = imgLoad.images.length,	
-        imgLoaded = 0,										
-        current = 0,							
-        progressTimer = setInterval(updateProgress, 2000 / 60);	
+// function imagesProgress(){
+//     const noticeClose = document.querySelector(".notice__close");
+//     const main = document.querySelector("#main");
+//     var $container = $("#progress"),
+//         $notice = $(".notice"),
+//         $progressText = $container.find(".progress-text"),
+//         imgLoad = imagesLoaded("body"),	
+//         imgTotal = imgLoad.images.length,	
+//         imgLoaded = 0,										
+//         current = 0,							
+//         progressTimer = setInterval(updateProgress, 2000 / 60);	
 
-        imgLoad.on("progress", function(){
-            imgLoaded++;
-        });
+//         imgLoad.on("progress", function(){
+//             imgLoaded++;
+//         });
 
-    function updateProgress(){
-        var target = ( imgLoaded / imgTotal) * 100;
+//     function updateProgress(){
+//         var target = ( imgLoaded / imgTotal) * 100;
 
-        current += ( target - current) * 0.1;
-        $progressText.text( Math.floor(current) );
-        $progressText.css("letter-spacing", 1000 - current * 10 + "px" );
+//         current += ( target - current) * 0.1;
+//         $progressText.text( Math.floor(current) );
+//         $progressText.css("letter-spacing", 1000 - current * 10 + "px" );
 
-        if(current >= 100){
-            clearInterval(progressTimer);
-            $container.animate({opacity: '0'},500,'easeInOutQuint');
-            $container.css("display", "none");
-            $notice.animate({opacity: '1'},1500,'easeInOutQuint');
-            noticeClose.addEventListener("click", () => {
-                $notice.css("pointer-events", "none");
-                main.style.opacity = 1;
-                $notice.animate({opacity: '0'},500,'easeInOutQuint');
-                gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 720 });
-                gsap.set("#home .figure2", { y: -500, opacity: 0, rotation: 720 });
-                gsap.set("#home .figure3", { y: -500, opacity: 0, rotation: 720 });
-                gsap.set("#home .figure4", { y: -500, opacity: 0, rotation: 720 });
-                gsap.set("#home .figure5", { y: -500, opacity: 0, rotation: 720 });
-                gsap.set("#home .homeDecoInner", { opacity: 0 });
-                gsap.set("#home .move__text__inner", { y: 200, opacity: 0 });
+//         if(current >= 100){
+//             clearInterval(progressTimer);
+//             $container.animate({opacity: '0'},500,'easeInOutQuint');
+//             $container.css("display", "none");
+//             $notice.animate({opacity: '1'},1500,'easeInOutQuint');
+//             noticeClose.addEventListener("click", () => {
+//                 $notice.css("pointer-events", "none");
+//                 main.style.opacity = 1;
+//                 $notice.animate({opacity: '0'},500,'easeInOutQuint');
+//                 gsap.set("#home .figure1", { y: -500, opacity: 0, rotation: 720 });
+//                 gsap.set("#home .figure2", { y: -500, opacity: 0, rotation: 720 });
+//                 gsap.set("#home .figure3", { y: -500, opacity: 0, rotation: 720 });
+//                 gsap.set("#home .figure4", { y: -500, opacity: 0, rotation: 720 });
+//                 gsap.set("#home .figure5", { y: -500, opacity: 0, rotation: 720 });
+//                 gsap.set("#home .homeDecoInner", { opacity: 0 });
+//                 gsap.set("#home .move__text__inner", { y: 200, opacity: 0 });
     
-                let tl = gsap.timeline();
-                tl.to("#home .figure1", {
-                    duration: 0.5,
-                    y: 0,
-                    opacity: 1,
-                    rotation: 45,
-                    ease: Power3.easeOut,
-                })
-                .to(
-                    "#home .figure3",
-                    {
-                        duration: 0.5,
-                        y: 0,
-                        opacity: 1,
-                        rotation: 45,
-                        ease: Power3.easeOut,
-                    },
-                    "-=0.2"
-                )
-                .to(
-                    "#home .figure2",
-                    {
-                        duration: 0.5,
-                        y: 0,
-                        opacity: 1,
-                        rotation: 45,
-                        ease: Power3.easeOut,
-                    },
-                    "-=0.2"
-                )
-                .to(
-                    "#home .figure5",
-                    {
-                        duration: 0.5,
-                        y: 0,
-                        opacity: 1,
-                        rotation: 45,
-                        ease: Power3.easeOut,
-                    },
-                    "-=0.2"
-                )
-                .to(
-                    "#home .figure4",
-                    {
-                        duration: 0.5,
-                        y: 0,
-                        opacity: 1,
-                        rotation: 45,
-                        ease: Power3.easeOut,
-                    },
-                    "-=0.2"
-                )
-                .to("#home .homeDecoInner", {
-                    duration: 0.5,
-                    opacity: 1,
-                    ease: Power3.easeIn,
-                })
-                .to("#home .move__text__inner", {
-                    duration: 0.7,
-                    y: 0,
-                    opacity: 1,
-                    ease: Power4.easeOut,
-                })
-                .to("#header", {
-                    duration: 0.7,
-                    y: 0,
-                    opacity: 1,
-                    ease: Power4.easeOut,
-                });
-            })
+//                 let tl = gsap.timeline();
+//                 tl.to("#home .figure1", {
+//                     duration: 0.5,
+//                     y: 0,
+//                     opacity: 1,
+//                     rotation: 45,
+//                     ease: Power3.easeOut,
+//                 })
+//                 .to(
+//                     "#home .figure3",
+//                     {
+//                         duration: 0.5,
+//                         y: 0,
+//                         opacity: 1,
+//                         rotation: 45,
+//                         ease: Power3.easeOut,
+//                     },
+//                     "-=0.2"
+//                 )
+//                 .to(
+//                     "#home .figure2",
+//                     {
+//                         duration: 0.5,
+//                         y: 0,
+//                         opacity: 1,
+//                         rotation: 45,
+//                         ease: Power3.easeOut,
+//                     },
+//                     "-=0.2"
+//                 )
+//                 .to(
+//                     "#home .figure5",
+//                     {
+//                         duration: 0.5,
+//                         y: 0,
+//                         opacity: 1,
+//                         rotation: 45,
+//                         ease: Power3.easeOut,
+//                     },
+//                     "-=0.2"
+//                 )
+//                 .to(
+//                     "#home .figure4",
+//                     {
+//                         duration: 0.5,
+//                         y: 0,
+//                         opacity: 1,
+//                         rotation: 45,
+//                         ease: Power3.easeOut,
+//                     },
+//                     "-=0.2"
+//                 )
+//                 .to("#home .homeDecoInner", {
+//                     duration: 0.5,
+//                     opacity: 1,
+//                     ease: Power3.easeIn,
+//                 })
+//                 .to("#home .move__text__inner", {
+//                     duration: 0.7,
+//                     y: 0,
+//                     opacity: 1,
+//                     ease: Power4.easeOut,
+//                 })
+//                 .to("#header", {
+//                     duration: 0.7,
+//                     y: 0,
+//                     opacity: 1,
+//                     ease: Power4.easeOut,
+//                 });
+//             })
 
-        }
-        if(current > 99.9){
-            current = 100;
-        };
-    };
-};
+//         }
+//         if(current > 99.9){
+//             current = 100;
+//         };
+//     };
+// };
 
-imagesProgress();
+// imagesProgress();
 
 
 // 컨택트
