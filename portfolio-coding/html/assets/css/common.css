@@ -25,7 +25,9 @@ body {
     overflow-x: hidden;
 }
 body.fixed {
-    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* img */
@@ -73,17 +75,14 @@ img {
     opacity: 0;
 }
 
-/* horizon */
-.horizon {
-    /* display: none; */
-}
-.horizon.show {
-    display: block;
-}
-
 /* progress */
-.progress {}
+.progress {
+    pointer-events: none;
+}
 .progress-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 20vw;
     text-align: center;
     line-height: 100vh;

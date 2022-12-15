@@ -14,6 +14,26 @@ function scroll(){
             document.querySelector(".navigation ul li:nth-child("+(index+1)+")").classList.add("active");
         }
     })
+
+    // about01 이미지 바꾸기
+    const aboutImg = document.querySelectorAll(".about__me01__img");
+
+    if (scrollTop > 2900 && scrollTop < 3500) {
+        aboutImg.forEach((e) => {
+            e.classList.remove("show");
+        });
+        aboutImg[1].classList.add("show");
+    } else if (scrollTop >= 3500) {
+        aboutImg.forEach((e) => {
+            e.classList.remove("show");
+        });
+        aboutImg[2].classList.add("show");
+    } else {
+        aboutImg.forEach((e) => {
+            e.classList.remove("show");
+        });
+        aboutImg[0].classList.add("show");
+    }
     
     requestAnimationFrame(scroll);
 }

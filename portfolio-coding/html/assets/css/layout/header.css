@@ -4,7 +4,8 @@
   position: fixed;
   top: 0;
   z-index: 3;
-  /* opacity: 0; */
+  opacity: 0;
+  pointer-events: none;
 }
 .header__inner {
   display: flex;
@@ -40,6 +41,7 @@ details[open] > summary::after {
   text-transform: uppercase;
   position: absolute;
   z-index: 10;
+  pointer-events: all;
 }
 .color__menu summary {
   border-bottom: 3px solid var(--white);
@@ -82,7 +84,9 @@ details[open] > summary::after {
 }
 
 /* logo */
-.logo {}
+.logo {
+  pointer-events: all;
+}
 .logo a {
   height: 3.6vw;
 }
@@ -101,6 +105,7 @@ details[open] > summary::after {
   position: absolute;
   right: 0;
   z-index: 10;
+  pointer-events: all;
 }
 .navigation summary {
   border-bottom: 3px solid var(--white);
